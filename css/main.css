@@ -3829,6 +3829,11 @@ input[type="radio"]:checked + label:after {
 @media (max-width: 600px) {
 	/* Information */
 
+	.information-wrapper.information-carousel-cell {
+		width: 100%;
+		margin-right: 14px;
+	}
+
 	.information-carousel .flickity-page-dots {
 		display: block;
 		position: absolute;
@@ -3845,19 +3850,23 @@ input[type="radio"]:checked + label:after {
 	}
 
 	.information-head video {
-		height: 168px;
+		/* height: 168px; */
+	}
+
+	.information-head img,
+	.information-head video {
+		max-height: 220px;
+		height: 100%;
 	}
 
 	.information-item {
-		/* width: 329px; */
 		width: 100%;
-		height: 380px;
-		margin-right: 14px;
+		height: 394px;
 	}
 
 	.information-body {
-		/* padding: 25px 25px;
-		 */
+		font-size: 17px;
+		line-height: 22px;
 		padding: 25px 30px;
 	}
 
@@ -4002,6 +4011,8 @@ input[type="radio"]:checked + label:after {
 }
 
 .no-bottom-radius > img {
+	/* max-height: ; */
+	height: 100%;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
 }
