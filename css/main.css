@@ -1227,7 +1227,7 @@ input[type="radio"]:checked + label:after {
 	flex-direction: column;
 	align-items: flex-start;
 	width: 43%;
-	padding: 16px 0px 0px;
+	/* padding: 16px 0px 0px; */
 	margin-left: 40px;
 }
 
@@ -1368,7 +1368,10 @@ input[type="radio"]:checked + label:after {
 }
 
 .chapters-mobile-container .is-selected .chapters-mobile-item > .description {
-	display: unset;
+	/* display: unset; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .show-on-mobile {
@@ -1384,6 +1387,7 @@ input[type="radio"]:checked + label:after {
 .chapters-tags {
 	display: flex;
 	flex-wrap: wrap;
+	margin-top: 12px;
 }
 
 .chapters-tag {
@@ -3827,6 +3831,11 @@ input[type="radio"]:checked + label:after {
 }
 
 @media (max-width: 600px) {
+	/* Chapters */
+	.chapters-mobile-item > .description {
+		min-height: 32px;
+	}
+
 	/* Information */
 
 	.information-wrapper.information-carousel-cell {
@@ -3855,13 +3864,15 @@ input[type="radio"]:checked + label:after {
 
 	.information-head img,
 	.information-head video {
-		max-height: 220px;
-		height: 100%;
+		height: 220px;
+		width: 100%;
+		/* object-fit: cover; */
 	}
 
 	.information-item {
 		width: 100%;
-		height: 394px;
+		/* height: 394px; */
+		height: 438px;
 	}
 
 	.information-body {
@@ -4011,8 +4022,9 @@ input[type="radio"]:checked + label:after {
 }
 
 .no-bottom-radius > img {
-	/* max-height: ; */
-	height: 100%;
+	height: 220px;
+	/* height: 100%; */
+	object-fit: cover;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
 }
