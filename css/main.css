@@ -3832,6 +3832,7 @@ input[type="radio"]:checked + label:after {
 
 @media (max-width: 600px) {
 	/* Chapters */
+
 	.chapters-mobile-item > .description {
 		min-height: 32px;
 	}
@@ -4022,11 +4023,16 @@ input[type="radio"]:checked + label:after {
 }
 
 .no-bottom-radius > img {
-	height: 220px;
-	/* height: 100%; */
-	object-fit: cover;
+	height: 100%;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+	.no-bottom-radius > img {
+		height: 220px;
+		object-fit: cover;
+	}
 }
 
 .hidden {
