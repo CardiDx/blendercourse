@@ -817,7 +817,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .promo-item-text {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 20px;
 	height: 19px;
 	padding: 1px 6px 0px;
