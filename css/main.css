@@ -313,8 +313,8 @@ https://flickity.metafizzy.co
 
 .flickity-page-dots .dot {
 	display: inline-block;
-	width: 10px;
-	height: 10px;
+	width: 8px;
+	height: 8px;
 	margin: 0 8px;
 	background: #333;
 	border-radius: 50%;
@@ -838,7 +838,7 @@ input[type="radio"]:checked + label:after {
 
 .promo-text.desktop {
 	display: block;
-	padding-right: 75px;
+	padding-right: 50px;
 }
 
 .promo-text.mobile {
@@ -1282,7 +1282,7 @@ input[type="radio"]:checked + label:after {
 	font-weight: 400;
 	font-size: 12.5px;
 	color: #808080;
-	margin-left: 4px;
+	margin-left: 6px;
 }
 
 .chapters-info-time {
@@ -1951,7 +1951,7 @@ input[type="radio"]:checked + label:after {
 
 .pp_ls_block_lessons_text {
 	align-self: center;
-	padding-left: 8px;
+	margin-left: 6px;
 	padding-right: 12px;
 }
 
@@ -1967,7 +1967,7 @@ input[type="radio"]:checked + label:after {
 
 .pp_ls_block_duration_text {
 	align-self: center;
-	padding-left: 8px;
+	margin-left: 6px;
 }
 
 .pp_ls_block_duration_text_li {
@@ -2435,10 +2435,11 @@ input[type="radio"]:checked + label:after {
 	color: #fff;
 	width: 100%;
 	padding-left: 16px;
-	padding-top: 2px;
+	padding-top: 4px;
 	font-family: inherit;
 	font-size: 15px;
 	box-sizing: border-box;
+	line-height: 150%;
 }
 
 .pp_rs_ui_submit_button {
@@ -3216,6 +3217,13 @@ input[type="radio"]:checked + label:after {
 		margin-bottom: 35px;
 	}
 
+	.faq_ls_bottom_picture {
+		width: 50%;
+		max-width: 100%;
+		background-color: #ffd3ca;
+		border-radius: 15px;
+	}
+
 	.faq_right_side {
 		position: unset;
 		margin-top: 45px;
@@ -3931,7 +3939,7 @@ input[type="radio"]:checked + label:after {
 	}
 
 	.information-carousel .flickity-page-dots .dot.is-selected {
-		background: #fed328;
+		background: #3d3d3d;
 	}
 
 	.information-head img,
