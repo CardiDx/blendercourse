@@ -985,30 +985,28 @@ input[type="radio"]:checked + label:after {
 }
 
 .teachers-content {
-	display: flex;
+	/* display: flex;
 	flex-flow: wrap;
+	justify-content: space-between; */
 	margin-top: 30px;
-	justify-content: space-between;
+}
+
+.teachers-content .flickity-prev-next-button {
+	top: -470px;
 }
 
 .teachers-wrapper {
-	display: flex;
-	flex-direction: row;
-	width: 50%;
-	flex-wrap: wrap;
-	margin-bottom: 14px;
+	/* width: 25%; */
 }
 
 .teachers-item {
-	background-color: #1d1d1d;
 	box-sizing: border-box;
-	padding: 30px 30px;
 	width: 100%;
 	border-radius: 25px;
 }
 
 .teachers-item.margin-right {
-	margin-right: 7px;
+	margin-right: 15px;
 }
 
 .teachers-item.margin-left {
@@ -1017,14 +1015,16 @@ input[type="radio"]:checked + label:after {
 
 .teacher-header {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-direction: column;
+	/* flex-wrap: nowrap; */
 }
 
 .teacher-header img {
-	max-width: 110px;
-	max-height: 110px;
-	border-radius: 20px;
+	/* max-width: 110px;
+	max-height: 110px; */
+	/* border-radius: 20px; */
+	max-width: 100%;
+	width: 240px;
 }
 
 .teacher-header-info {
@@ -1033,14 +1033,11 @@ input[type="radio"]:checked + label:after {
 	justify-content: center;
 	box-sizing: border-box;
 	margin-left: 30px;
-}
-
-.teacher-header-info .info-title {
-	padding-top: 4px;
+	margin-top: 24px;
 }
 
 .teacher-header-info .info-post-title {
-	padding-top: 4px;
+	padding-top: 8px;
 	font-size: 14px;
 }
 
@@ -3072,9 +3069,9 @@ input[type="radio"]:checked + label:after {
 	/* Teachers */
 
 	.teacher-header img {
-		max-width: 90px;
+		/* max-width: 90px;
 		max-height: 90px;
-		border-radius: 18px;
+		border-radius: 18px; */
 	}
 
 	.teacher-body br {
@@ -3389,7 +3386,7 @@ input[type="radio"]:checked + label:after {
 @media only screen and (max-width: 849px) {
 	/* Teachers */
 
-	.teachers-wrapper {
+	/* .teachers-wrapper {
 		width: 100%;
 		justify-content: space-around;
 		margin-bottom: 15px;
@@ -3407,7 +3404,7 @@ input[type="radio"]:checked + label:after {
 		max-width: 110px;
 		max-height: 110px;
 		border-radius: 30px;
-	}
+	} */
 
 	.information-body {
 		max-width: unset;
@@ -3541,15 +3538,15 @@ input[type="radio"]:checked + label:after {
 		padding: 30px 0px;
 	}
 
-	.teachers-wrapper {
+	/* .teachers-wrapper {
 		width: 100%;
 		justify-content: space-around;
-	}
+	}*/
+
 
 	.teachers-header {
 		padding: 110px 30px 0px;
-	}
-
+	} 
 	/* Information */
 
 	.information {
@@ -3995,6 +3992,12 @@ input[type="radio"]:checked + label:after {
 		max-width: 370px;
 	}
 
+	.testimonials-carousel .flickity-page-dots {
+		display: block;
+		position: absolute;
+		bottom: -30px;
+	}
+
 	/* Student-work */
 
 	.student-work .header-text {
@@ -4079,11 +4082,11 @@ input[type="radio"]:checked + label:after {
 @media only screen and (max-width: 399px) {
 	/* Teachers */
 
-	.teacher-header img {
+	/* .teacher-header img {
 		max-width: 90px;
 		max-height: 90px;
 		border-radius: 25px;
-	}
+	} */
 
 	/* Chapters */
 
@@ -4112,10 +4115,10 @@ input[type="radio"]:checked + label:after {
 	margin-right: 0px;
 }
 
-.no-bottom-radius > img {
+/* .no-bottom-radius > img {
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
-}
+} */
 
 .hidden {
 	display: none;
