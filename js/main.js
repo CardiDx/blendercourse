@@ -623,7 +623,7 @@ $(".teachers-carousel").flickity({
   // Enable if items have percent widths
   // Disable if items have pixel widths, like images
 
-  prevNextButtons: true,
+  prevNextButtons: false,
   // creates and enables buttons to click to previous & next cells
 
   pageDots: true,
