@@ -1070,8 +1070,9 @@ $(document).ready(function () {
   let prevScrollpos = window.pageYOffset;
   $(window).scroll(function (event) {
     lastScrollpos = window.pageYOffset;
-    if (lastScrollpos > prevScrollpos) {
+    if ((lastScrollpos > prevScrollpos + 30) || (lastScrollpos < prevScrollpos - 30)) {
       $(".header").removeClass("active");
+      prevScrollpos = window.pageYOffset;
     }
   });
 });
