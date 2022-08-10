@@ -118,7 +118,7 @@ body {
 
 .button.lego-smile::before {
 	content: "";
-	background: url(/media/images/css/robot.svg) no-repeat center left;
+	background: url("../media/images/css/robot.svg") no-repeat center left;
 	min-width: 32px;
 	height: 25px;
 	display: block;
@@ -1174,7 +1174,7 @@ input[type="radio"]:checked + label:after {
 	position: relative;
 	width: 24px;
 	left: 19px;
-	bottom: 49px;
+	bottom: 43px;
 }
 
 .media-contents {
@@ -1853,7 +1853,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .pp_ls_block_picture::before {
-	content: url(/media/images/css/checked.svg);
+	content: url("../media/images/css/checked.svg");
 	fill: #101010;
 	line-height: 0px;
 	padding: 7px;
@@ -1871,7 +1871,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .pp_ls_block_picture::after {
-	content: url(/media/images/css/plus.svg);
+	content: url("../media/images/css/plus.svg");
 	fill: #101010;
 	line-height: 0px;
 	padding: 7px;
@@ -1884,7 +1884,7 @@ input[type="radio"]:checked + label:after {
 	opacity: 0;
 }
 
-.pp_ls_block_picture > img {
+.pp_ls_block_picture > picture img {
 	border-radius: 20px;
 	width: 86px;
 	height: 86px;
@@ -1894,7 +1894,7 @@ input[type="radio"]:checked + label:after {
 	transition: all var(---acc-trans-time);
 }
 
-.pp_ls_img_border > img {
+.pp_ls_img_border > picture img {
 	border: 1px solid #fff3;
 }
 
@@ -1948,7 +1948,7 @@ input[type="radio"]:checked + label:after {
 	font-size: 13px;
 }
 
-.pp_ls_block_lessons_picture > img {
+.pp_ls_block_lessons_picture > picture img {
 	margin-top: 5px;
 }
 
@@ -1964,7 +1964,7 @@ input[type="radio"]:checked + label:after {
 	font-size: 13px;
 }
 
-.pp_ls_block_duration_picture > img {
+.pp_ls_block_duration_picture > picture img {
 	margin-top: 5px;
 }
 
@@ -2007,7 +2007,7 @@ input[type="radio"]:checked + label:after {
 	height: 15px;
 }
 
-.pp_ls_block_indev_picture > img {
+.pp_ls_block_indev_picture > picture img {
 	margin-top: 4px;
 	height: 15px;
 }
@@ -2118,7 +2118,7 @@ input[type="radio"]:checked + label:after {
 	opacity: 1;
 }
 
-.checked_block > .pp_ls_block_picture > img {
+.checked_block > .pp_ls_block_picture > picture img {
 	opacity: 0.5;
 }
 
