@@ -16,6 +16,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+img {
+	display: block;
+}
+
 html,
 body {
 	max-width: 100vw;
@@ -1150,7 +1154,7 @@ input[type="radio"]:checked + label:after {
 	outline: 2px solid #0000;
 	outline-offset: -2px;
 	margin-bottom: 8px;
-
+	overflow: hidden;
 	-webkit-transition: outline var(--trans-time);
 	-moz-transition: outline var(--trans-time);
 	-o-transition: outline var(--trans-time);
@@ -1199,7 +1203,7 @@ input[type="radio"]:checked + label:after {
 	z-index: 1;
 }
 
-.media-content > img {
+.media-content > picture img {
 	width: 100%;
 	border-radius: 16px;
 }
@@ -1482,7 +1486,7 @@ input[type="radio"]:checked + label:after {
 	max-height: 354px;
 }
 
-.example-image > img {
+.example-image > picture img {
 	max-width: 325px;
 	min-width: 325px;
 	max-height: 354px;
@@ -1513,7 +1517,7 @@ input[type="radio"]:checked + label:after {
 	flex-wrap: nowrap;
 }
 
-.example-footer-top > img {
+.example-footer-top > picture img {
 	max-width: 64px;
 	max-height: 64px;
 	border-radius: 20px;
@@ -3549,7 +3553,7 @@ input[type="radio"]:checked + label:after {
 	.teachers-header {
 		padding: 110px 0px 0px;
 	}
-	
+
 	/* Information */
 
 	.information {

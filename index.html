@@ -12,6 +12,18 @@
 				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
 					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
 		})(window, document, 'script', 'dataLayer', 'GTM-KSN7KHJ');</script>
+
+	<style>
+		.lazyload,
+		.lazyloading {
+			opacity: 0;
+		}
+
+		.lazyloaded {
+			opacity: 1;
+			transition: opacity 300ms;
+		}
+	</style>
 	<!-- End Google Tag Manager -->
 
 	<meta charset="UTF-8" />
@@ -57,6 +69,8 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/modal.css">
+
+	<script src="js/lazysizes.min.js"></script>
 </head>
 
 <body id="top">
@@ -263,9 +277,9 @@
 					<!-- <img src="media/images/trailer/trailer_poster.png" class="trailer-play-bg" alt="блендер сцена с курицей 3д"> -->
 
 					<picture>
-						<source srcset="media/images/trailer/trailer_poster.webp" type="image/webp">
-						<source srcset="media/images/trailer/trailer_poster.png" type="image/png">
-						<img src="media/images/trailer/trailer_poster.png" alt="блендер сцена с курицей 3д">
+						<source data-srcset="media/images/trailer/trailer_poster.webp" type="image/webp">
+						<source data-srcset="media/images/trailer/trailer_poster.png" type="image/png">
+						<img class="lazyload" data-src="media/images/trailer/trailer_poster.png" alt="блендер сцена с курицей 3д">
 					</picture>
 				</div>
 			</div>
@@ -291,9 +305,9 @@
 							<!-- <img src="media/images/teachers/mad-rabbit.png" alt="3д иллюстрация основателя курса"> -->
 
 							<picture>
-								<source srcset="media/images/teachers/mad-rabbit.webp" type="image/webp">
-								<source srcset="media/images/teachers/mad-rabbit.png" type="image/png">
-								<img src="media/images/teachers/mad-rabbit.png" alt="3д иллюстрация основателя курса">
+								<source data-srcset="media/images/teachers/mad-rabbit.webp" type="image/webp">
+								<source data-srcset="media/images/teachers/mad-rabbit.png">
+								<img class="lazyload" data-src="media/images/teachers/mad-rabbit.png" alt="3д иллюстрация основателя курса">
 							</picture>
 
 							<div class="teacher-header-info">
@@ -308,9 +322,9 @@
 						<div class="teacher-header">
 							<!-- <img src="media/images/teachers/mellis.png" alt="3д иллюстрация преподавателя по риггингу"> -->
 							<picture>
-								<source srcset="media/images/teachers/mellis.webp" type="image/webp">
-								<source srcset="media/images/teachers/mellis.png" type="image/png">
-								<img src="media/images/teachers/mellis.png" alt="3д иллюстрация преподавателя по риггингу">
+								<source data-srcset="media/images/teachers/mellis.webp" type="image/webp">
+								<source data-srcset="media/images/teachers/mellis.png" type="image/png">
+								<img class="lazyload" data-src="media/images/teachers/mellis.png" alt="3д иллюстрация преподавателя по риггингу">
 							</picture>
 							<div class="teacher-header-info">
 								<div class="info-title">Александра Mellis</div>
@@ -325,9 +339,9 @@
 							<!-- <img src="media/images/teachers/ekaterina.png" alt="3д иллюстрация преподавателя по шерсти"> -->
 
 							<picture>
-								<source srcset="media/images/teachers/ekaterina.webp" type="image/webp">
-								<source srcset="media/images/teachers/ekaterina.png" type="image/png">
-								<img src="media/images/teachers/ekaterina.png" alt="3д иллюстрация преподавателя по шерсти">
+								<source data-srcset="media/images/teachers/ekaterina.webp" type="image/webp">
+								<source data-srcset="media/images/teachers/ekaterina.png" type="image/png">
+								<img class="lazyload" data-src="media/images/teachers/ekaterina.png" alt="3д иллюстрация преподавателя по шерсти">
 							</picture>
 
 							<div class="teacher-header-info">
@@ -343,9 +357,9 @@
 							<!-- <img src="media/images/teachers/dmitriy-montaj.png" alt="3д иллюстрация преподавателя по монтажу и звуку"> -->
 
 							<picture>
-								<source srcset="media/images/teachers/dmitriy-montaj.webp" type="image/webp">
-								<source srcset="media/images/teachers/dmitriy-montaj.png" type="image/png">
-								<img src="media/images/teachers/dmitriy-montaj.png" alt="3д иллюстрация преподавателя по монтажу и звуку">
+								<source data-srcset="media/images/teachers/dmitriy-montaj.webp" type="image/webp">
+								<source data-srcset="media/images/teachers/dmitriy-montaj.png" type="image/png">
+								<img class="lazyload" data-src="media/images/teachers/dmitriy-montaj.png" alt="3д иллюстрация преподавателя по монтажу и звуку">
 							</picture>
 
 							<div class="teacher-header-info">
@@ -393,9 +407,9 @@
 							<!-- <img src="media/images/information/2.png" alt="текст с описанием работ учеников"> -->
 
 							<picture>
-								<source srcset="media/images/information/2.webp" type="image/webp">
-								<source srcset="media/images/information/2.png" type="image/png">
-								<img src="media/images/information/2.png" alt="текст с описанием работ учеников">
+								<source data-srcset="media/images/information/2.webp" type="image/webp">
+								<source data-srcset="media/images/information/2.png" type="image/png">
+								<img class="lazyload" data-src="media/images/information/2.png" alt="текст с описанием работ учеников">
 							</picture>
 						</div>
 						<div class="information-body">
@@ -412,9 +426,9 @@
 							<!-- <img src="media/images/information/3.png" alt="3д сцена лего персонажей"> -->
 
 							<picture>
-								<source srcset="media/images/information/3.webp" type="image/webp">
-								<source srcset="media/images/information/3.png" type="image/png">
-								<img src="media/images/information/3.png" alt="3д сцена лего персонажей">
+								<source data-srcset="media/images/information/3.webp" type="image/webp">
+								<source data-srcset="media/images/information/3.png" type="image/png">
+								<img class="lazyload" data-src="media/images/information/3.png" alt="3д сцена лего персонажей">
 							</picture>
 						</div>
 						<div class="information-body">
@@ -449,36 +463,36 @@
 							<div class="preview media-selector" select-index="1">
 								<!-- <img src="media/images/chapters/preview_01_01.png" alt="превью лего кружка"> -->
 								<picture>
-									<source srcset="media/images/chapters/preview_01_01.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_01_01.png" type="image/png">
-									<img src="media/images/chapters/preview_01_01.png" alt="превью лего кружка">
+									<source data-srcset="media/images/chapters/preview_01_01.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_01_01.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_01_01.png" alt="превью лего кружка">
 								</picture>
 							</div>
 							<div class="preview media-selector" select-index="2">
 								<!-- <img src="media/images/chapters/preview_01_02.png" alt="превью стена и работник"> -->
 
 								<picture>
-									<source srcset="media/images/chapters/preview_01_02.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_01_02.png" type="image/png">
-									<img src="media/images/chapters/preview_01_02.png" alt="превью стена и работник">
+									<source data-srcset="media/images/chapters/preview_01_02.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_01_02.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_01_02.png" alt="превью стена и работник">
 								</picture>
 							</div>
 							<div class="preview media-selector" select-index="3">
 								<!-- <img src="media/images/chapters/preview_01_03.png" alt="превью комнаты 3д"> -->
 
 								<picture>
-									<source srcset="media/images/chapters/preview_01_03.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_01_03.png" type="image/png">
-									<img src="media/images/chapters/preview_01_03.png" alt="превью комнаты 3д">
+									<source data-srcset="media/images/chapters/preview_01_03.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_01_03.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_01_03.png" alt="превью комнаты 3д">
 								</picture>
 								<img class="play-icon" src="media/images/chapters/play.svg" alt="Иконка запуска" data-no-retina>
 							</div>
 							<div class="preview media-selector" select-index="4">
 								<!-- <img src="media/images/chapters/preview_01_04.png" alt="превью коляски 3д"> -->
 								<picture>
-									<source srcset="media/images/chapters/preview_01_04.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_01_04.png" type="image/png">
-									<img src="media/images/chapters/preview_01_04.png" alt="превью коляски 3д">
+									<source data-srcset="media/images/chapters/preview_01_04.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_01_04.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_01_04.png" alt="превью коляски 3д">
 								</picture>
 							</div>
 						</div>
@@ -486,9 +500,9 @@
 							<div class="media-content active">
 								<!-- <img src="media/images/chapters/image_01_01.png" alt="Рабочее место в 3д"> -->
 								<picture>
-									<source srcset="media/images/chapters/image_01_01.webp" type="image/webp">
-									<source srcset="media/images/chapters/image_01_01.png" type="image/png">
-									<img src="media/images/chapters/image_01_01.png" alt="Рабочее место в 3д">
+									<source data-srcset="media/images/chapters/image_01_01.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/image_01_01.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/image_01_01.png" alt="Рабочее место в 3д">
 								</picture>
 								<div class="description">
 									Сделаем также во время обучения
@@ -497,9 +511,9 @@
 							<div class="media-content">
 								<!-- <img src="media/images/chapters/image_01_02.png" alt="Замок в 3д"> -->
 								<picture>
-									<source srcset="media/images/chapters/image_01_02.webp" type="image/webp">
-									<source srcset="media/images/chapters/image_01_02.png" type="image/png">
-									<img src="media/images/chapters/image_01_02.png" alt="Замок в 3д">
+									<source data-srcset="media/images/chapters/image_01_02.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/image_01_02.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/image_01_02.png" alt="Замок в 3д">
 								</picture>
 								<div class="description">
 									Работа студента после прохождения блока
@@ -507,8 +521,8 @@
 							</div>
 							<div class="media-content">
 								<!-- <video loading="lazy" src="media/video/chapters/video_01_03.mp4" poster="/media/images/chapters/image_01_03.png" autoplay playsinline muted loop></video> -->
-								<video loading="lazy" poster="/media/images/chapters/image_01_03.png" autoplay playsinline muted loop>
-									<source src="media/video/information/video_01_03.webm" type="video/webm">
+								<video loading="lazy" poster="media/images/chapters/image_01_03.png" autoplay playsinline muted loop>
+									<source src="media/video/chapters/video_01_03.webm" type="video/webm">
 									<source src="media/video/chapters/video_01_03.mp4" type="video/mp4">
 								</video>
 								<div class="description">
@@ -518,9 +532,9 @@
 							<div class="media-content">
 								<!-- <img src="media/images/chapters/image_01_04.png" alt="беспорядок в комната 3д"> -->
 								<picture>
-									<source srcset="media/images/chapters/image_01_04.webp" type="image/webp">
-									<source srcset="media/images/chapters/image_01_04.png" type="image/png">
-									<img src="media/images/chapters/image_01_04.png" alt="беспорядок в комната 3д">
+									<source data-srcset="media/images/chapters/image_01_04.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/image_01_04.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/image_01_04.png" alt="беспорядок в комната 3д">
 								</picture>
 								<div class="description">
 									Работа студента после прохождения блока
@@ -561,9 +575,9 @@
 												<!-- <img src="media/images/chapters/slide_01_01.png" alt="рабочий стол в 3д"> -->
 
 												<picture>
-													<source srcset="media/images/chapters/slide_01_01.webp" type="image/webp">
-													<source srcset="media/images/chapters/slide_01_01.png" type="image/png">
-													<img src="media/images/chapters/slide_01_01.png" alt="рабочий стол в 3д">
+													<source data-srcset="media/images/chapters/slide_01_01.webp" type="image/webp">
+													<source data-srcset="media/images/chapters/slide_01_01.png" type="image/png">
+													<img class="lazyload" data-src="media/images/chapters/slide_01_01.png" alt="рабочий стол в 3д">
 												</picture>
 												<div class="description">
 													Сделаем также во время обучения
@@ -575,9 +589,9 @@
 												<!-- <img src="media/images/chapters/slide_01_02.png" alt="3д сцена мальчика и монстров"> -->
 
 												<picture>
-													<source srcset="media/images/chapters/slide_01_02.webp" type="image/webp">
-													<source srcset="media/images/chapters/slide_01_02.png" type="image/png">
-													<img src="media/images/chapters/slide_01_02.png" alt="3д сцена мальчика и монстров">
+													<source data-srcset="media/images/chapters/slide_01_02.webp" type="image/webp">
+													<source data-srcset="media/images/chapters/slide_01_02.png" type="image/png">
+													<img class="lazyload" data-src="media/images/chapters/slide_01_02.png" alt="3д сцена мальчика и монстров">
 												</picture>
 												<div class="description">
 													Работа студента после </br>
@@ -588,7 +602,7 @@
 										<div class="chapters-mobile-wrapper chapters-mobile-carousel-cell">
 											<div class="chapters-mobile-item">
 												<!-- <video loading="lazy" src="media/video/chapters/video_01_03.mp4" ></video> -->
-												<video loading="lazy" poster="/media/images/chapters/slide_01_03.png" autoplay playsinline muted loop>
+												<video loading="lazy" poster="media/images/chapters/slide_01_03.png" autoplay playsinline muted loop>
 													<source src="media/video/chapters/video_01_03.webm" type="video/webm">
 													<source src=media/video/chapters/video_01_03.mp4" type="video/mp4">
 												</video>
@@ -603,9 +617,9 @@
 												<img src="media/images/chapters/slide_01_04.png" alt="3д кот ест пиццу">
 
 												<picture>
-													<source srcset="media/images/chapters/slide_01_04.webp" type="image/webp">
-													<source srcset="media/images/chapters/slide_01_04.png" type="image/png">
-													<img src="media/images/chapters/slide_01_04.png" alt="3д кот ест пиццу">
+													<source data-srcset="media/images/chapters/slide_01_04.webp" type="image/webp">
+													<source data-srcset="media/images/chapters/slide_01_04.png" type="image/png">
+													<img class="lazyload" data-src="media/images/chapters/slide_01_04.png" alt="3д кот ест пиццу">
 												</picture>
 												<div class="description">
 													Работа студента после </br>
@@ -648,44 +662,44 @@
 							<div class="preview media-selector" select-index="1">
 								<!-- <img src="media/images/chapters/preview_02_01.png"> -->
 								<picture>
-									<source srcset="media/images/chapters/preview_02_01.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_02_01.png" type="image/png">
-									<img src="media/images/chapters/preview_02_01.png" alt="превью человек паук лего">
+									<source data-srcset="media/images/chapters/preview_02_01.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_02_01.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_02_01.png" alt="превью человек паук лего">
 								</picture>
 								<img class="play-icon" src="media/images/chapters/play.svg" alt="Иконка запуска" data-no-retina>
 							</div>
 							<div class="preview media-selector" select-index="2">
-								<img src="media/images/chapters/preview_02_02.png">
-								<!-- <picture>
-									<source srcset="media/images/chapters/preview_02_02.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_02_02.png" type="image/png">
-									<img src="media/images/chapters/preview_02_02.png" alt="превью железного человека лего">
-								</picture> -->
+								<!-- <img src="media/images/chapters/preview_02_02.png"> -->
+								<picture>
+									<source data-srcset="media/images/chapters/preview_02_02.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_02_02.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_02_02.png" alt="превью железного человека лего">
+								</picture>
 								<img class="play-icon" src="media/images/chapters/play.svg" alt="Иконка запуска" data-no-retina>
 							</div>
 							<div class="preview media-selector" select-index="3">
-								<img src="media/images/chapters/preview_02_03.png">
-								<!-- <picture>
-									<source srcset="media/images/chapters/preview_02_03.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_02_03.png" type="image/png">
-									<img src="media/images/chapters/preview_02_03.png" alt="превью тело лего">
-								</picture> -->
-								<img class="play-icon" src="media/images/chapters/play.svg" alt="Иконка запуска" data-no-retina>
+								<!-- <img src="media/images/chapters/preview_02_03.png"> -->
+								<picture>
+									<source data-srcset="media/images/chapters/preview_02_03.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_02_03.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_02_03.png" alt="превью тело лего">
+								</picture>
+								<img src="media/images/chapters/play.svg" alt="Иконка запуска" data-no-retina>
 							</div>
 							<div class="preview media-selector" select-index="4">
-								<img src="media/images/chapters/preview_02_04.png" alt="Лицо человека из лего">
-								<!-- <picture>
-									<source srcset="media/images/chapters/preview_02_04.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_02_04.png" type="image/png">
-									<img src="media/images/chapters/preview_02_04.png" alt="Лицо человека из лего">
-								</picture> -->
+								<!-- <img src="media/images/chapters/preview_02_04.png" alt="Лицо человека из лего"> -->
+								<picture>
+									<source data-srcset="media/images/chapters/preview_02_04.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_02_04.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_02_04.png" alt="Лицо человека из лего">
+								</picture>
 							</div>
 						</div>
 						<div class="media-contents">
 							<div class="media-content active">
 								<!-- <video loading="lazy" src="media/video/chapters/video_02_01.mp4" poster="/media/images/chapters/image_02_01.png" autoplay playsinline muted loop></video> -->
 
-								<video loading="lazy" poster="/media/images/chapters/image_02_01.png" autoplay playsinline muted loop>
+								<video loading="lazy" poster="media/images/chapters/image_02_01.png" autoplay playsinline muted loop>
 									<source src="media/video/chapters/video_02_01.webm" type="video/webm">
 									<source src=media/video/chapters/video_02_01.mp4" type="video/mp4">
 								</video>
@@ -696,7 +710,7 @@
 							<div class="media-content">
 								<!-- <video loading="lazy" src="media/video/chapters/video_02_02.mp4" poster="/media/images/chapters/image_02_02.png" autoplay playsinline muted loop></video> -->
 
-								<video loading="lazy" poster="/media/images/chapters/image_02_02.png" autoplay playsinline muted loop>
+								<video loading="lazy" poster="media/images/chapters/image_02_02.png" autoplay playsinline muted loop>
 									<source src="media/video/chapters/video_02_02.webm" type="video/webm">
 									<source src=media/video/chapters/video_02_02.mp4" type="video/mp4">
 								</video>
@@ -705,9 +719,9 @@
 								</div>
 							</div>
 							<div class="media-content">
-								<video loading="lazy" src="media/video/chapters/video_02_03.mp4" poster="/media/images/chapters/image_02_03.png" autoplay playsinline muted loop></video>
+								<!-- <video loading="lazy" src="media/video/chapters/video_02_03.mp4" poster="media/images/chapters/image_02_03.png" autoplay playsinline muted loop></video> -->
 
-								<video loading="lazy" poster="/media/images/chapters/image_02_03.png" autoplay playsinline muted loop>
+								<video loading="lazy" poster="media/images/chapters/image_02_03.png" autoplay playsinline muted loop>
 									<source src="media/video/chapters/video_02_03.webm" type="video/webm">
 									<source src=media/video/chapters/video_02_03.mp4" type="video/mp4">
 								</video>
@@ -716,12 +730,12 @@
 								</div>
 							</div>
 							<div class="media-content">
-								<img src="media/images/chapters/image_02_04.png" alt="тело человека из лего">
+								<!-- <img src="media/images/chapters/image_02_04.png" alt="тело человека из лего"> -->
 
 								<picture>
-									<source srcset="media/images/chapters/image_02_04.webp" type="image/webp">
-									<source srcset="media/images/chapters/image_02_04.png" type="image/png">
-									<img src="media/images/chapters/image_02_04.png" alt="тело человека из лего">
+									<source data-srcset="media/images/chapters/image_02_04.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/image_02_04.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/image_02_04.png" alt="тело человека из лего">
 								</picture>
 								<div class="description">
 									Работа студента после прохождения блока
@@ -761,7 +775,7 @@
 											<div class="chapters-mobile-item">
 												<!-- <video loading="lazy" src="media/video/chapters/video_02_01.mp4" poster="/media/images/chapters/slide_02_01.png" autoplay playsinline muted loop></video> -->
 
-												<video loading="lazy" poster="/media/images/chapters/slide_02_01.png" autoplay playsinline muted loop>
+												<video loading="lazy" poster="media/images/chapters/slide_02_01.png" autoplay playsinline muted loop>
 													<source src="media/video/chapters/video_02_01.webm" type="video/webm">
 													<source src="media/video/chapters/video_02_01.mp4" type="video/mp4">
 												</video>
@@ -774,7 +788,7 @@
 											<div class="chapters-mobile-item">
 												<!-- <video loading="lazy" src="media/video/chapters/video_02_02.mp4" poster="/media/images/chapters/slide_02_02.png" autoplay playsinline muted loop></video> -->
 
-												<video loading="lazy" poster="/media/images/chapters/slide_02_02.png" autoplay playsinline muted loop>
+												<video loading="lazy" poster="media/images/chapters/slide_02_02.png" autoplay playsinline muted loop>
 													<source src="media/video/chapters/video_02_02.webm" type="video/webm">
 													<source src="media/video/chapters/video_02_02.mp4" type="video/mp4">
 												</video>
@@ -786,9 +800,9 @@
 										</div>
 										<div class="chapters-mobile-wrapper chapters-mobile-carousel-cell">
 											<div class="chapters-mobile-item">
-												<video loading="lazy" class="pos_15" src="media/video/chapters/video_02_03.mp4" poster="/media/images/chapters/slide_02_03.png" autoplay playsinline muted loop></video>
+												<!-- <video loading="lazy" class="pos_15" src="media/video/chapters/video_02_03.mp4" poster="/media/images/chapters/slide_02_03.png" autoplay playsinline muted loop></video> -->
 
-												<video loading="lazy" class="pos_15" src="media/video/chapters/video_02_03.mp4" poster="/media/images/chapters/slide_02_03.png" autoplay playsinline muted loop>
+												<video loading="lazy" class="pos_15" src="media/video/chapters/video_02_03.mp4" poster="media/images/chapters/slide_02_03.png" autoplay playsinline muted loop>
 													<source src="media/video/chapters/video_02_03.webm" type="video/webm">
 													<source src="media/video/chapters/video_02_03.mp4" type="video/mp4">
 												</video>
@@ -801,9 +815,9 @@
 											<div class="chapters-mobile-item">
 												<img src="media/images/chapters/slide_02_04.png" alt="тело человека из лего">
 												<picture>
-													<source srcset="media/images/chapters/slide_02_04.webp" type="image/webp">
-													<source srcset="media/images/chapters/slide_02_04.png" type="image/png">
-													<img src="media/images/chapters/slide_02_04.png" alt="тело человека из лего">
+													<source data-srcset="media/images/chapters/slide_02_04.webp" type="image/webp">
+													<source data-srcset="media/images/chapters/slide_02_04.png" type="image/png">
+													<img class="lazyload" data-src="media/images/chapters/slide_02_04.png" alt="тело человека из лего">
 												</picture>
 												<div class="description">
 													Работа студента после </br>
@@ -848,34 +862,34 @@
 							<div class="preview media-selector" select-index="1">
 								<img src="media/images/chapters/preview_03_01.png" alt="превью зеленый гидрант 3д">
 								<picture>
-									<source srcset="media/images/chapters/preview_03_01.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_03_01.png" type="image/png">
-									<img src="media/images/chapters/preview_03_01.png" alt="превью зеленый гидрант 3д">
+									<source data-srcset="media/images/chapters/preview_03_01.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_03_01.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_03_01.png" alt="превью зеленый гидрант 3д">
 								</picture>
 							</div>
 							<div class="preview media-selector" select-index="2">
 								<!-- <img src="media/images/chapters/preview_03_02.png" alt="превью серый гидрант 3д"> -->
 								<picture>
-									<source srcset="media/images/chapters/preview_03_02.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_03_02.png" type="image/png">
-									<img src="media/images/chapters/preview_03_02.png" alt="превью серый гидрант 3д">
+									<source data-srcset="media/images/chapters/preview_03_02.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_03_02.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_03_02.png" alt="превью серый гидрант 3д">
 								</picture>
 								<img class="play-icon" src="media/images/chapters/play.svg" alt="иконка запуска" data-no-retina>
 							</div>
 							<div class="preview media-selector" select-index="3">
 								<!-- <img src="media/images/chapters/preview_03_03.png" alt="превью 3д сцена кот смотрит телевизор"> -->
 								<picture>
-									<source srcset="media/images/chapters/preview_03_03.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_03_03.png" type="image/png">
-									<img src="media/images/chapters/preview_03_03.png" alt="превью 3д сцена кот смотрит телевизор">
+									<source data-srcset="media/images/chapters/preview_03_03.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_03_03.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_03_03.png" alt="превью 3д сцена кот смотрит телевизор">
 								</picture>
 							</div>
 							<div class="preview media-selector" select-index="4">
-								<img src="media/images/chapters/preview_03_04.png" alt="превью 3д сцена красный гидрант">
+								<!-- <img src="media/images/chapters/preview_03_04.png" alt="превью 3д сцена красный гидрант"> -->
 								<picture>
-									<source srcset="media/images/chapters/preview_03_04.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_03_04.png" type="image/png">
-									<img src="media/images/chapters/preview_03_04.png" alt="превью 3д сцена красный гидрант">
+									<source data-srcset="media/images/chapters/preview_03_04.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_03_04.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_03_04.png" alt="превью 3д сцена красный гидрант">
 								</picture>
 								<img class="play-icon" src="media/images/chapters/play.svg" alt="иконка запуска" data-no-retina>
 							</div>
@@ -884,9 +898,9 @@
 							<div class="media-content active">
 								<!-- <img src="media/images/chapters/image_03_01.png" al	t="зеленый гидрант 3д"> -->
 								<picture>
-									<source srcset="media/images/chapters/image_03_01.webp" type="image/webp">
-									<source srcset="media/images/chapters/image_03_01.png" type="image/png">
-									<img src="media/images/chapters/image_03_01.png" alt="превью 3д сцена красный гидрант">
+									<source data-srcset="media/images/chapters/image_03_01.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/image_03_01.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/image_03_01.png" alt="превью 3д сцена красный гидрант">
 								</picture>
 								<div class="description">
 									Работа студента после прохождения блока
@@ -895,7 +909,7 @@
 							<div class="media-content">
 								<!-- <video loading="lazy" src="media/video/chapters/video_03_02.mp4" poster="/media/images/chapters/image_03_02.png" autoplay playsinline muted loop></video> -->
 
-								<video loading="lazy" class="pos_15" src="media/video/chapters/video_03_02.mp4" poster="/media/images/chapters/image_03_02.png" autoplay playsinline muted loop>
+								<video loading="lazy" class="pos_15" src="media/video/chapters/video_03_02.mp4" poster="media/images/chapters/image_03_02.png" autoplay playsinline muted loop>
 									<source src="media/video/chapters/video_03_02.webm" type="video/webm">
 									<source src="media/video/chapters/video_03_02.mp4" type="video/mp4">
 								</video>
@@ -908,9 +922,9 @@
 							<div class="media-content">
 								<!-- <img src="media/images/chapters/image_03_03.png" alt="3д сцена кот смотрит телевизор"> -->
 								<picture>
-									<source srcset="media/images/chapters/image_03_03.webp" type="image/webp">
-									<source srcset="media/images/chapters/image_03_03.png" type="image/png">
-									<img src="media/images/chapters/image_03_03.png" alt="3д сцена кот смотрит телевизор">
+									<source data-srcset="media/images/chapters/image_03_03.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/image_03_03.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/image_03_03.png" alt="3д сцена кот смотрит телевизор">
 								</picture>
 								<div class="description">
 									Работа студента после прохождения блока
@@ -919,7 +933,7 @@
 							<div class="media-content">
 								<!-- <video loading="lazy" src="media/video/chapters/video_03_04.mp4" poster="/media/images/chapters/image_03_04.png" autoplay playsinline muted loop></video> -->
 
-								<video loading="lazy" class="pos_15" src="media/video/chapters/video_03_04.mp4" poster="/media/images/chapters/image_03_04.png" autoplay playsinline muted loop>
+								<video loading="lazy" class="pos_15" src="media/video/chapters/video_03_04.mp4" poster="media/images/chapters/image_03_04.png" autoplay playsinline muted loop>
 									<source src="media/video/chapters/video_03_04.webm" type="video/webm">
 									<source src="media/video/chapters/video_03_04.mp4" type="video/mp4">
 								</video>
@@ -961,9 +975,9 @@
 											<div class="chapters-mobile-item">
 												<!-- <img src="media/images/chapters/slide_03_01.png" alt="зеленый гидрант 3д"> -->
 												<picture>
-													<source srcset="media/images/chapters/image_03_01.webp" type="image/webp">
-													<source srcset="media/images/chapters/image_03_01.png" type="image/png">
-													<img src="media/images/chapters/image_03_01.png" alt="зеленый гидрант 3д">
+													<source data-srcset="media/images/chapters/image_03_01.webp" type="image/webp">
+													<source data-srcset="media/images/chapters/image_03_01.png" type="image/png">
+													<img class="lazyload" data-src="media/images/chapters/image_03_01.png" alt="зеленый гидрант 3д">
 												</picture>
 												<div class="description">
 													Работа студента после </br>
@@ -975,7 +989,7 @@
 											<div class="chapters-mobile-item">
 												<!-- <video loading="lazy" src="media/video/chapters/video_03_02.mp4" poster="/media/images/chapters/slide_03_02.png" autoplay playsinline muted loop></video> -->
 
-												<video loading="lazy" class="pos_15" src="media/video/chapters/video_03_02.mp4" poster="/media/images/chapters/slide_03_02.png" autoplay playsinline muted loop>
+												<video loading="lazy" class="pos_15" src="media/video/chapters/video_03_02.mp4" poster="media/images/chapters/slide_03_02.png" autoplay playsinline muted loop>
 													<source src="media/video/chapters/video_03_02.webm" type="video/webm">
 													<source src="media/video/chapters/video_03_02.mp4" type="video/mp4">
 												</video>
@@ -989,9 +1003,9 @@
 											<div class="chapters-mobile-item">
 												<!-- <img src="media/images/chapters/slide_03_03.png" alt="3д сцена кот смотрит телевизор"> -->
 												<picture>
-													<source srcset="media/images/chapters/slide_03_03.webp" type="image/webp">
-													<source srcset="media/images/chapters/slide_03_03.png" type="image/png">
-													<img src="media/images/chapters/slide_03_03.png" alt="3д сцена кот смотрит телевизор">
+													<source data-srcset="media/images/chapters/slide_03_03.webp" type="image/webp">
+													<source data-srcset="media/images/chapters/slide_03_03.png" type="image/png">
+													<img class="lazyload" data-src="media/images/chapters/slide_03_03.png" alt="3д сцена кот смотрит телевизор">
 												</picture>
 												<div class="description">
 													Работа студента после </br>
@@ -1001,9 +1015,9 @@
 										</div>
 										<div class="chapters-mobile-wrapper chapters-mobile-carousel-cell">
 											<div class="chapters-mobile-item">
-												<video loading="lazy" src="media/video/chapters/video_03_04.mp4" poster="/media/images/chapters/slide_03_04.png" autoplay playsinline muted loop></video>
+												<!-- <video loading="lazy" src="media/video/chapters/video_03_04.mp4" poster="/media/images/chapters/slide_03_04.png" autoplay playsinline muted loop></video> -->
 
-												<video loading="lazy" class="pos_15" src="media/video/chapters/video_03_04.mp4" poster="/media/images/chapters/slide_03_04.png" autoplay playsinline muted loop>
+												<video loading="lazy" class="pos_15" src="media/video/chapters/video_03_04.mp4" poster="media/images/chapters/slide_03_04.png" autoplay playsinline muted loop>
 													<source src="media/video/chapters/video_03_04.webm" type="video/webm">
 													<source src="media/video/chapters/video_03_04.mp4" type="video/mp4">
 												</video>
@@ -1047,34 +1061,34 @@
 							<div class="preview media-selector" select-index="1">
 								<!-- <img src="media/images/chapters/preview_04_01.png" alt="превью стилизация персонажа 3д"> -->
 								<picture>
-									<source srcset="media/images/chapters/preview_04_01.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_04_01.png" type="image/png">
-									<img src="media/images/chapters/preview_04_01.png" alt="превью стилизация персонажа 3д">
+									<source data-srcset="media/images/chapters/preview_04_01.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_04_01.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_04_01.png" alt="превью стилизация персонажа 3д">
 								</picture>
 							</div>
 							<div class="preview media-selector" select-index="2">
-								<img src="media/images/chapters/preview_04_02.png" alt="превью человек 3д">
+								<!-- <img data-src="media/images/chapters/preview_04_02.png" alt="превью человек 3д"> -->
 								<picture>
-									<source srcset="media/images/chapters/preview_04_02.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_04_02.png" type="image/png">
-									<img src="media/images/chapters/preview_04_02.png" alt="превью человек 3д">
+									<source data-srcset="media/images/chapters/preview_04_02.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_04_02.png" type="image/png">
+									<img class="lazyload" src="media/images/chapters/preview_04_02.png" alt="превью человек 3д">
 								</picture>
 								<img class="play-icon" src="media/images/chapters/play.svg" alt="иконка запуска" data-no-retina>
 							</div>
 							<div class="preview media-selector" select-index="3">
 								<img src="media/images/chapters/preview_04_03.png" alt="превью стилизация человека 3д">
 								<picture>
-									<source srcset="media/images/chapters/preview_04_03.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_04_03.png" type="image/png">
-									<img src="media/images/chapters/preview_04_03.png" alt="превью стилизация человека 3д">
+									<source data-srcset="media/images/chapters/preview_04_03.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_04_03.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_04_03.png" alt="превью стилизация человека 3д">
 								</picture>
 							</div>
 							<div class="preview media-selector" select-index="4">
 								<!-- <img src="media/images/chapters/preview_04_04.png" alt="превью персонажа бумажный дом"> -->
 								<picture>
-									<source srcset="media/images/chapters/preview_04_04.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_04_04.png" type="image/png">
-									<img src="media/images/chapters/preview_04_04.png" alt="превью персонажа бумажный дом">
+									<source data-srcset="media/images/chapters/preview_04_04.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_04_04.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_04_04.png" alt="превью персонажа бумажный дом">
 								</picture>
 								<img class="play-icon" src="media/images/chapters/play.svg" alt="иконка запуска" data-no-retina>
 							</div>
@@ -1083,9 +1097,9 @@
 							<div class="media-content active">
 								<!-- <img src="media/images/chapters/image_04_01.png" alt="стилизация персонажа 3д"> -->
 								<picture>
-									<source srcset="media/images/chapters/image_04_01.webp" type="image/webp">
-									<source srcset="media/images/chapters/image_04_01.png" type="image/png">
-									<img src="media/images/chapters/image_04_01.png" alt="стилизация персонажа 3д">
+									<source data-srcset="media/images/chapters/image_04_01.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/image_04_01.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/image_04_01.png" alt="стилизация персонажа 3д">
 								</picture>
 								<div class="description">
 									Сделаем также во время обучения
@@ -1094,7 +1108,7 @@
 							<div class="media-content">
 								<!-- <video loading="lazy" src="media/video/chapters/video_04_02.mp4" poster="/media/images/chapters/image_04_02.png" autoplay playsinline muted loop></video> -->
 
-								<video loading="lazy" class="pos_15" src="media/video/chapters/video_04_02.mp4" poster="/media/images/chapters/slide_04_02.png" autoplay playsinline muted loop>
+								<video loading="lazy" class="pos_15" src="media/video/chapters/video_04_02.mp4" poster="media/images/chapters/slide_04_02.png" autoplay playsinline muted loop>
 									<source src="media/video/chapters/video_03_04.webm" type="video/webm">
 									<source src="media/video/chapters/video_03_04.mp4" type="video/mp4">
 								</video>
@@ -1106,9 +1120,9 @@
 							<div class="media-content">
 								<!-- <img src="media/images/chapters/image_04_03.png" alt="человек с четырьмя руками 3д"> -->
 								<picture>
-									<source srcset="media/images/chapters/image_04_03.webp" type="image/webp">
-									<source srcset="media/images/chapters/image_04_03.png" type="image/png">
-									<img src="media/images/chapters/image_04_03.png" alt="человек с четырьмя руками 3д">
+									<source data-srcset="media/images/chapters/image_04_03.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/image_04_03.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/image_04_03.png" alt="человек с четырьмя руками 3д">
 								</picture>
 								<div class="description">
 									Работа студента после прохождения блока
@@ -1116,7 +1130,7 @@
 							</div>
 							<div class="media-content">
 								<!-- <video loading="lazy" src="media/video/chapters/video_04_04.mp4" poster="/media/images/chapters/image_04_04.png" autoplay playsinline muted loop></video> -->
-								<video loading="lazy" class="pos_15" src="media/video/chapters/video_04_04.mp4" poster="/media/images/chapters/slide_04_04.png" autoplay playsinline muted loop>
+								<video loading="lazy" class="pos_15" src="media/video/chapters/video_04_04.mp4" poster="media/images/chapters/slide_04_04.png" autoplay playsinline muted loop>
 									<source src="media/video/chapters/video_04_04.webm" type="video/webm">
 									<source src="media/video/chapters/video_04_04.mp4" type="video/mp4">
 								</video>
@@ -1159,9 +1173,9 @@
 												<!-- <img src="media/images/chapters/slide_04_01.png"> -->
 
 												<picture>
-													<source srcset="media/images/chapters/slide_04_01.webp" type="image/webp">
-													<source srcset="media/images/chapters/slide_04_01.png" type="image/png">
-													<img src="media/images/chapters/slide_04_01.png" alt="человек с автоматом 3д">
+													<source data-srcset="media/images/chapters/slide_04_01.webp" type="image/webp">
+													<source data-srcset="media/images/chapters/slide_04_01.png" type="image/png">
+													<img class="lazyload" data-src="media/images/chapters/slide_04_01.png" alt="человек с автоматом 3д">
 												</picture>
 												<div class="description">
 													Сделаем также во время обучения
@@ -1172,7 +1186,7 @@
 											<div class="chapters-mobile-item">
 												<!-- <video loading="lazy" src="media/video/chapters/video_04_02.mp4" poster="/media/images/chapters/slide_04_02.png" autoplay playsinline muted loop></video> -->
 
-												<video loading="lazy" class="pos_15" src="media/video/chapters/video_04_02.mp4" poster="/media/images/chapters/slide_04_02.png" autoplay playsinline muted loop>
+												<video loading="lazy" class="pos_15" src="media/video/chapters/video_04_02.mp4" poster="media/images/chapters/slide_04_02.png" autoplay playsinline muted loop>
 													<source src="media/video/chapters/video_04_02.webm" type="video/webm">
 													<source src="media/video/chapters/video_04_02.mp4" type="video/mp4">
 												</video>
@@ -1185,9 +1199,9 @@
 											<div class="chapters-mobile-item">
 												<!-- <img src="media/images/chapters/slide_04_03.png"> -->
 												<picture>
-													<source srcset="media/images/chapters/slide_04_03.webp" type="image/webp">
-													<source srcset="media/images/chapters/slide_04_03.png" type="image/png">
-													<img src="media/images/chapters/slide_04_03.png" alt="человек с четрыьмя руками 3д">
+													<source data-srcset="media/images/chapters/slide_04_03.webp" type="image/webp">
+													<source data-srcset="media/images/chapters/slide_04_03.png" type="image/png">
+													<img class="lazyload" data-src="media/images/chapters/slide_04_03.png" alt="человек с четрыьмя руками 3д">
 												</picture>
 												<div class="description">
 													Работа студента после </br>
@@ -1198,7 +1212,7 @@
 										<div class="chapters-mobile-wrapper chapters-mobile-carousel-cell">
 											<div class="chapters-mobile-item">
 												<!-- <video loading="lazy" src="media/video/chapters/video_04_04.mp4" poster="/media/images/chapters/slide_04_04.png" autoplay playsinline muted loop></video> -->
-												<video loading="lazy" class="pos_15" src="media/video/chapters/video_04_04.mp4" poster="/media/images/chapters/slide_04_04.png" autoplay playsinline muted loop>
+												<video loading="lazy" class="pos_15" src="media/video/chapters/video_04_04.mp4" poster="media/images/chapters/slide_04_04.png" autoplay playsinline muted loop>
 													<source src="media/video/chapters/video_04_04.webm" type="video/webm">
 													<source src="media/video/chapters/video_04_04.mp4" type="video/mp4">
 												</video>
@@ -1244,34 +1258,34 @@
 								<!-- <img src="media/images/chapters/preview_05_01.png"> -->
 
 								<picture>
-									<source srcset="media/images/chapters/preview_05_01.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_05_01.png" type="image/png">
-									<img src="media/images/chapters/preview_05_01.png" alt="превью пушистый снеговик 3д">
+									<source data-srcset="media/images/chapters/preview_05_01.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_05_01.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_05_01.png" alt="превью пушистый снеговик 3д">
 								</picture>
 							</div>
 							<div class="preview media-selector" select-index="2">
 								<!-- <img src="media/images/chapters/preview_05_02.png"> -->
 								<picture>
-									<source srcset="media/images/chapters/preview_05_02.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_05_02.png" type="image/png">
-									<img src="media/images/chapters/preview_05_02.png" alt="превью рыжий мальчик 3д">
+									<source data-srcset="media/images/chapters/preview_05_02.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_05_02.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_05_02.png" alt="превью рыжий мальчик 3д">
 								</picture>
 							</div>
 							<div class="preview media-selector" select-index="3">
 								<!-- <img src="media/images/chapters/preview_05_03.png"> -->
 								<picture>
-									<source srcset="media/images/chapters/preview_05_03.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_05_03.png" type="image/png">
-									<img src="media/images/chapters/preview_05_03.png" alt="превью снеговик с черными волосами 3д">
+									<source data-srcset="media/images/chapters/preview_05_03.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_05_03.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_05_03.png" alt="превью снеговик с черными волосами 3д">
 								</picture>
 								<img class="play-icon" src="media/images/chapters/play.svg" data-no-retina>
 							</div>
 							<div class="preview media-selector" select-index="4">
 								<!-- <img src="media/images/chapters/preview_05_04.png"> -->
 								<picture>
-									<source srcset="media/images/chapters/preview_05_04.webp" type="image/webp">
-									<source srcset="media/images/chapters/preview_05_04.png" type="image/png">
-									<img src="media/images/chapters/preview_05_04.png" alt="превью капитан с бородой 3д">
+									<source data-srcset="media/images/chapters/preview_05_04.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/preview_05_04.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/preview_05_04.png" alt="превью капитан с бородой 3д">
 								</picture>
 							</div>
 						</div>
@@ -1279,9 +1293,9 @@
 							<div class="media-content active">
 								<!-- <img src="media/images/chapters/image_05_01.png"> -->
 								<picture>
-									<source srcset="media/images/chapters/image_05_01.webp" type="image/webp">
-									<source srcset="media/images/chapters/image_05_01.png" type="image/png">
-									<img src="media/images/chapters/image_05_01.png" alt="пушистый снеговик в шапке 3д">
+									<source data-srcset="media/images/chapters/image_05_01.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/image_05_01.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/image_05_01.png" alt="пушистый снеговик в шапке 3д">
 								</picture>
 								<div class="description">
 									Сделаем также во время обучения
@@ -1290,9 +1304,9 @@
 							<div class="media-content">
 								<!-- <img src="media/images/chapters/image_05_02.png"> -->
 								<picture>
-									<source srcset="media/images/chapters/image_05_02.webp" type="image/webp">
-									<source srcset="media/images/chapters/image_05_02.png" type="image/png">
-									<img src="media/images/chapters/image_05_02.png" alt="рыжий мальчик 3д">
+									<source data-srcset="media/images/chapters/image_05_02.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/image_05_02.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/image_05_02.png" alt="рыжий мальчик 3д">
 								</picture>
 								<div class="description">
 									Работа студента после прохождения блока
@@ -1301,7 +1315,7 @@
 							<div class="media-content">
 								<!-- <video loading="lazy" src="media/video/chapters/video_05_03.mp4" poster="/media/images/chapters/image_05_03.png" autoplay playsinline muted loop></video> -->
 
-								<video loading="lazy" class="pos_15" src="media/video/chapters/video_05_03.mp4" poster="/media/images/chapters/slide_05_03.png" autoplay playsinline muted loop>
+								<video loading="lazy" class="pos_15" src="media/video/chapters/video_05_03.mp4" poster="media/images/chapters/slide_05_03.png" autoplay playsinline muted loop>
 									<source src="media/video/chapters/video_05_03.webm" type="video/webm">
 									<source src="media/video/chapters/video_05_03.mp4" type="video/mp4">
 								</video>
@@ -1313,9 +1327,9 @@
 								<!-- <img src="media/images/chapters/image_05_04.png"> -->
 
 								<picture>
-									<source srcset="media/images/chapters/image_05_04.webp" type="image/webp">
-									<source srcset="media/images/chapters/image_05_04.png" type="image/png">
-									<img src="media/images/chapters/image_05_04.png" alt="капитан с бородой 3д">
+									<source data-srcset="media/images/chapters/image_05_04.webp" type="image/webp">
+									<source data-srcset="media/images/chapters/image_05_04.png" type="image/png">
+									<img class="lazyload" data-src="media/images/chapters/image_05_04.png" alt="капитан с бородой 3д">
 								</picture>
 								<div class="description">
 									Работа студента после прохождения блока
@@ -1356,9 +1370,9 @@
 												<!-- <img src="media/images/chapters/slide_05_01.png" alt="3д сцена пушистый снеговик в шапке"> -->
 
 												<picture>
-													<source srcset="media/images/chapters/slide_05_01.webp" type="image/webp">
-													<source srcset="media/images/chapters/slide_05_01.png" type="image/png">
-													<img src="media/images/chapters/slide_05_01.png" alt="3д сцена пушистый снеговик в шапке">
+													<source data-srcset="media/images/chapters/slide_05_01.webp" type="image/webp">
+													<source data-srcset="media/images/chapters/slide_05_01.png" type="image/png">
+													<img class="lazyload" data-src="media/images/chapters/slide_05_01.png" alt="3д сцена пушистый снеговик в шапке">
 												</picture>
 
 												<div class="description">
@@ -1368,12 +1382,12 @@
 										</div>
 										<div class="chapters-mobile-wrapper chapters-mobile-carousel-cell">
 											<div class="chapters-mobile-item">
-												<img src="media/images/chapters/slide_05_02.png" alt="3д сцена рыжий кучерявый мальчик">
+												<!-- <img class="lazyload" data-src="media/images/chapters/slide_05_02.png" alt="3д сцена рыжий кучерявый мальчик"> -->
 
 												<picture>
-													<source srcset="media/images/chapters/slide_05_02.webp" type="image/webp">
-													<source srcset="media/images/chapters/slide_05_02.png" type="image/png">
-													<img src="media/images/chapters/slide_05_02.png" alt="3д сцена рыжий кучерявый мальчик">
+													<source data-srcset="media/images/chapters/slide_05_02.webp" type="image/webp">
+													<source data-srcset="media/images/chapters/slide_05_02.png" type="image/png">
+													<img class="lazyload" data-src="media/images/chapters/slide_05_02.png" alt="3д сцена рыжий кучерявый мальчик">
 												</picture>
 												<div class="description">
 													Работа студента после </br>
@@ -1385,7 +1399,7 @@
 											<div class="chapters-mobile-item">
 												<!-- <video loading="lazy" class="pos_33" src="media/video/chapters/video_05_03.mp4" poster="/media/images/chapters/slide_05_03.png" autoplay playsinline muted loop></video> -->
 
-												<video loading="lazy" class="pos_33" src="media/video/chapters/video_05_03.mp4" poster="/media/images/chapters/slide_05_03.png" autoplay playsinline muted loop>
+												<video loading="lazy" class="pos_33" src="media/video/chapters/video_05_03.mp4" poster="media/images/chapters/slide_05_03.png" autoplay playsinline muted loop>
 													<source src="media/video/chapters/video_05_03.webm" type="video/webm">
 													<source src="media/video/chapters/video_05_03.mp4" type="video/mp4">
 												</video>
@@ -1399,9 +1413,9 @@
 												<!-- <img src="media/images/chapters/slide_05_04.png"> -->
 
 												<picture>
-													<source srcset="media/images/chapters/slide_05_04.webp" type="image/webp">
-													<source srcset="media/images/chapters/slide_05_04.png" type="image/png">
-													<img src="media/images/chapters/slide_05_04.png" alt="3д сцена капитан с бородой в очках">
+													<source data-srcset="media/images/chapters/slide_05_04.webp" type="image/webp">
+													<source data-srcset="media/images/chapters/slide_05_04.png" type="image/png">
+													<img class="lazyload" data-src="media/images/chapters/slide_05_04.png" alt="3д сцена капитан с бородой в очках">
 												</picture>
 												<div class="description">
 													Работа студента после </br>
@@ -1467,18 +1481,18 @@
 									<!-- <img src="media/images/examples/example_1.png"> -->
 
 									<picture>
-										<source srcset="media/images/examples/example_1.webp" type="image/webp">
-										<source srcset="media/images/examples/example_1.png" type="image/png">
-										<img src="media/images/examples/example_1.png" alt="3д сцена мальчик с монстром">
+										<source data-srcset="media/images/examples/example_1.webp" type="image/webp">
+										<source data-srcset="media/images/examples/example_1.png" type="image/png">
+										<img class="lazyload" data-src="media/images/examples/example_1.png" alt="3д сцена мальчик с монстром">
 									</picture>
 								</div>
 								<div class="example-footer">
 									<div class="example-footer-top">
 										<!-- <img src="media/images/examples/ava_1.png" alt="аватар студента Максим Шамин"> -->
 										<picture>
-											<source srcset="media/images/examples/ava_1.webp" type="image/webp">
-											<source srcset="media/images/examples/ava_1.png" type="image/png">
-											<img src="media/images/examples/ava_1.png" alt="аватар студента Максим Шамин">
+											<source data-srcset="media/images/examples/ava_1.webp" type="image/webp">
+											<source data-srcset="media/images/examples/ava_1.png" type="image/png">
+											<img class="lazyload" data-src="media/images/examples/ava_1.png" alt="аватар студента Максим Шамин">
 										</picture>
 										<div class="example-footer-info">
 											<div class="info-title">Максим Шамин</div>
@@ -1515,9 +1529,9 @@
 										<!-- <img src="media/images/examples/ava_2.png" alt="аватар студента Алексей Копыт"> -->
 
 										<picture>
-											<source srcset="media/images/examples/ava_2.webp" type="image/webp">
-											<source srcset="media/images/examples/ava_2.png" type="image/png">
-											<img src="media/images/examples/ava_2.png" alt="3д сцена мальчик с монстром">
+											<source data-srcset="media/images/examples/ava_2.webp" type="image/webp">
+											<source data-srcset="media/images/examples/ava_2.png" type="image/png">
+											<img class="lazyload" data-src="media/images/examples/ava_2.png" alt="3д сцена мальчик с монстром">
 										</picture>
 										<div class="example-footer-info">
 											<div class="info-title">Алексей Копыт</div>
@@ -1544,9 +1558,9 @@
 									<!-- <img src="media/images/examples/example_3.png"> -->
 
 									<picture>
-										<source srcset="media/images/examples/example_3.webp" type="image/webp">
-										<source srcset="media/images/examples/example_3.png" type="image/png">
-										<img src="media/images/examples/example_3.png" alt="3д кот с пиццей и кофем">
+										<source data-srcset="media/images/examples/example_3.webp" type="image/webp">
+										<source data-srcset="media/images/examples/example_3.png" type="image/png">
+										<img class="lazyload" data-src="media/images/examples/example_3.png" alt="3д кот с пиццей и кофем">
 									</picture>
 
 								</div>
@@ -1555,9 +1569,9 @@
 										<!-- <img src="media/images/examples/ava_3.png" alt="аватар студента Роман Колотилин"> -->
 
 										<picture>
-											<source srcset="media/images/examples/ava_3.webp" type="image/webp">
-											<source srcset="media/images/examples/ava_3.png" type="image/png">
-											<img src="media/images/examples/ava_3.png" alt="аватар студента Роман Колотилин">
+											<source data-srcset="media/images/examples/ava_3.webp" type="image/webp">
+											<source data-srcset="media/images/examples/ava_3.png" type="image/png">
+											<img class="lazyload" data-src="media/images/examples/ava_3.png" alt="аватар студента Роман Колотилин">
 										</picture>
 										<div class="example-footer-info">
 											<div class="info-title">Роман Колотилин</div>
@@ -1584,18 +1598,18 @@
 									<!-- <img src="media/images/examples/example_4.png" alt="3д сцена персонаж в перчатках"> -->
 
 									<picture>
-										<source srcset="media/images/examples/example_4.webp" type="image/webp">
-										<source srcset="media/images/examples/example_4.png" type="image/png">
-										<img src="media/images/examples/example_4.png" alt="3д сцена персонаж в перчатках">
+										<source data-srcset="media/images/examples/example_4.webp" type="image/webp">
+										<source data-srcset="media/images/examples/example_4.png" type="image/png">
+										<img class="lazyload" data-src="media/images/examples/example_4.png" alt="3д сцена персонаж в перчатках">
 									</picture>
 								</div>
 								<div class="example-footer">
 									<div class="example-footer-top">
 										<!-- <img src="media/images/examples/ava_4.png" alt="аватар студента Вадим Константинович"> -->
 										<picture>
-											<source srcset="media/images/examples/ava_4.webp" type="image/webp">
-											<source srcset="media/images/examples/ava_4.png" type="image/png">
-											<img src="media/images/examples/ava_4.png" alt="аватар студента Вадим Константинович">
+											<source data-srcset="media/images/examples/ava_4.webp" type="image/webp">
+											<source data-srcset="media/images/examples/ava_4.png" type="image/png">
+											<img class="lazyload" data-src="media/images/examples/ava_4.png" alt="аватар студента Вадим Константинович">
 										</picture>
 										<div class="example-footer-info">
 											<div class="info-title">Вадим Константинович</div>
@@ -1620,9 +1634,9 @@
 								<div class="example-image">
 									<!-- <img src="media/images/examples/example_5.png" alt="3д сцена проектирования комнаты"> -->
 									<picture>
-										<source srcset="media/images/examples/example_5.webp" type="image/webp">
-										<source srcset="media/images/examples/example_5.png" type="image/png">
-										<img src="media/images/examples/example_5.png" alt="3д сцена проектирования комнаты">
+										<source data-srcset="media/images/examples/example_5.webp" type="image/webp">
+										<source data-srcset="media/images/examples/example_5.png" type="image/png">
+										<img class="lazyload" data-src="media/images/examples/example_5.png" alt="3д сцена проектирования комнаты">
 									</picture>
 
 								</div>
@@ -1631,9 +1645,9 @@
 										<!-- <img src="media/images/examples/ava_5.png" alt="аватар студента Евгений Заболотний"> -->
 
 										<picture>
-											<source srcset="media/images/examples/ava_5.webp" type="image/webp">
-											<source srcset="media/images/examples/ava_5.png" type="image/png">
-											<img src="media/images/examples/ava_5.png" alt="аватар студента Евгений Заболотний">
+											<source data-srcset="media/images/examples/ava_5.webp" type="image/webp">
+											<source data-srcset="media/images/examples/ava_5.png" type="image/png">
+											<img class="lazyload" data-src="media/images/examples/ava_5.png" alt="аватар студента Евгений Заболотний">
 										</picture>
 										<div class="example-footer-info">
 											<div class="info-title">Евгений Заболотний</div>
@@ -1659,9 +1673,9 @@
 									<!-- <img src="media/images/examples/example_6.png" alt="3д сцена компьютера"> -->
 
 									<picture>
-										<source srcset="media/images/examples/example_6.webp" type="image/webp">
-										<source srcset="media/images/examples/example_6.png" type="image/png">
-										<img src="media/images/examples/example_6.png" alt="3д сцена компьютера">
+										<source data-srcset="media/images/examples/example_6.webp" type="image/webp">
+										<source data-srcset="media/images/examples/example_6.png" type="image/png">
+										<img class="lazyload" data-src="media/images/examples/example_6.png" alt="3д сцена компьютера">
 									</picture>
 								</div>
 								<div class="example-footer">
@@ -1669,9 +1683,9 @@
 										<!-- <img src="media/images/examples/ava_6.png" alt="аватар студента Евгений Заболотний"> -->
 
 										<picture>
-											<source srcset="media/images/examples/ava_6.webp" type="image/webp">
-											<source srcset="media/images/examples/ava_6.png" type="image/png">
-											<img src="media/images/examples/ava_6.png" alt="аватар студента Евгений Заболотний">
+											<source data-srcset="media/images/examples/ava_6.webp" type="image/webp">
+											<source data-srcset="media/images/examples/ava_6.png" type="image/png">
+											<img class="lazyload" data-src="media/images/examples/ava_6.png" alt="аватар студента Евгений Заболотний">
 										</picture>
 										<div class="example-footer-info">
 											<div class="info-title">Сергей Игнатеня</div>
@@ -1699,9 +1713,9 @@
 									<!-- <img src="media/images/examples/example_7.png" alt="3д сцена лего девочки"> -->
 
 									<picture>
-										<source srcset="media/images/examples/example_7.webp" type="image/webp">
-										<source srcset="media/images/examples/example_7.png" type="image/png">
-										<img src="media/images/examples/example_7.png" alt="3д сцена лего девочки">
+										<source data-srcset="media/images/examples/example_7.webp" type="image/webp">
+										<source data-srcset="media/images/examples/example_7.png" type="image/png">
+										<img class="lazyload" data-src="media/images/examples/example_7.png" alt="3д сцена лего девочки">
 									</picture>
 								</div>
 								<div class="example-footer">
@@ -1709,9 +1723,9 @@
 										<!-- <img src="media/images/examples/ava_7.png" alt="аватар студента Ульяна Ткаченко"> -->
 
 										<picture>
-											<source srcset="media/images/examples/ava_7.webp" type="image/webp">
-											<source srcset="media/images/examples/ava_7.png" type="image/png">
-											<img src="media/images/examples/ava_7.png" alt="аватар студента Ульяна Ткаченко">
+											<source data-srcset="media/images/examples/ava_7.webp" type="image/webp">
+											<source data-srcset="media/images/examples/ava_7.png" type="image/png">
+											<img class="lazyload" data-src="media/images/examples/ava_7.png" alt="аватар студента Ульяна Ткаченко">
 										</picture>
 										<div class="example-footer-info">
 											<div class="info-title">Ульяна Ткаченко</div>
@@ -1735,12 +1749,12 @@
 						<div class="examples-wrapper examples-carousel-cell">
 							<div class="example-item">
 								<div class="example-image">
-									<img src="media/images/examples/example_8.png" alt="3д сцена модный лис с колонкой">
+									<!-- <img src="media/images/examples/example_8.png" alt="3д сцена модный лис с колонкой"> -->
 
 									<picture>
-										<source srcset="media/images/chapters/example_8.webp" type="image/webp">
-										<source srcset="media/images/chapters/example_8.png" type="image/png">
-										<img src="media/images/chapters/example_8.png" alt="3д сцена модный лис с колонкой">
+										<source data-srcset="media/images/examples/example_8.webp" type="image/webp">
+										<source data-srcset="media/images/examples/example_8.png" type="image/png">
+										<img class="lazyload" data-src="media/images/examples/example_8.png" alt="3д сцена модный лис с колонкой">
 									</picture>
 								</div>
 								<div class="example-footer">
@@ -1748,9 +1762,9 @@
 										<!-- <img src="media/images/examples/ava_8.png" alt="аватар студента Света Ерёмина"> -->
 
 										<picture>
-											<source srcset="media/images/chapters/ava_8.webp" type="image/webp">
-											<source srcset="media/images/chapters/ava_8.png" type="image/png">
-											<img src="media/images/chapters/ava_8.png" alt="аватар студента Света Ерёмина">
+											<source data-srcset="media/images/examples/ava_8.webp" type="image/webp">
+											<source data-srcset="media/images/examples/ava_8.png" type="image/png">
+											<img class="lazyload" data-src="media/images/examples/ava_8.png" alt="аватар студента Света Ерёмина">
 										</picture>
 										<div class="example-footer-info">
 											<div class="info-title">Света Ерёмина</div>
@@ -1801,7 +1815,13 @@
 						<div class="examples-wrapper examples-carousel-cell">
 							<div class="example-item">
 								<div class="example-image">
-									<img src="media/images/examples/example_10.png" alt="3д сцена Роман Карасев">
+									<!-- <img src="media/images/examples/example_10.png" alt="3д сцена Роман Карасев"> -->
+
+									<picture>
+										<source data-srcset="media/images/examples/example_10.webp" type="image/webp">
+										<source data-srcset="media/images/examples/example_10.png" type="image/png">
+										<img class="lazyload" data-src="media/images/examples/example_10.png" alt="3д сцена пират на одной ноге">
+									</picture>
 								</div>
 								<div class="example-footer">
 									<div class="example-footer-top">
@@ -1827,7 +1847,13 @@
 						<div class="examples-wrapper examples-carousel-cell">
 							<div class="example-item">
 								<div class="example-image">
-									<img src="media/images/examples/example_11.png" alt="3д сцена мотоцикл">
+									<!-- <img src="media/images/examples/example_11.png" alt="3д сцена мотоцикл"> -->
+
+									<picture>
+										<source data-srcset="media/images/examples/example_11.webp" type="image/webp">
+										<source data-srcset="media/images/examples/example_11.png" type="image/png">
+										<img class="lazyload" data-src="media/images/examples/example_11.png" alt="3д сцена мотоцикл">
+									</picture>
 								</div>
 								<div class="example-footer">
 									<div class="example-footer-top">
@@ -1885,11 +1911,23 @@
 						<div class="examples-wrapper examples-carousel-cell">
 							<div class="example-item">
 								<div class="example-image">
-									<img src="media/images/examples/example_13.png" alt="3д сцена рыжий кот смотрит телевизор">
+									<!-- <img src="media/images/examples/example_13.png" alt="3д сцена рыжий кот смотрит телевизор"> -->
+
+									<picture>
+										<source data-srcset="media/images/examples/example_13.webp" type="image/webp">
+										<source data-srcset="media/images/examples/example_13.png" type="image/png">
+										<img class="lazyload" data-src="media/images/examples/example_13.png" alt="3д сцена рыжий кот смотрит телевизор">
+									</picture>
 								</div>
 								<div class="example-footer">
 									<div class="example-footer-top">
-										<img src="media/images/examples/ava_13.png" alt="аватар студента Дима Никоноров">
+										<!-- <img src="media/images/examples/ava_13.png" alt="аватар студента Дима Никоноров"> -->
+
+										<picture>
+											<source data-srcset="media/images/examples/ava_13.webp" type="image/webp">
+											<source data-srcset="media/images/examples/ava_13.png" type="image/png">
+											<img class="lazyload" data-src="media/images/examples/ava_13.png" alt="аватар студента Дима Никоноров">
+										</picture>
 										<div class="example-footer-info">
 											<div class="info-title">Дима Никоноров</div>
 											<div class="info-post-title">Попал в ТОП<br>на blendernation.org</div>
@@ -1911,11 +1949,23 @@
 						<div class="examples-wrapper examples-carousel-cell">
 							<div class="example-item">
 								<div class="example-image">
-									<img src="media/images/examples/example_14.png" alt="3д сцена ленивец с кофем">
+									<!-- <img src="media/images/examples/example_14.png" alt="3д сцена ленивец с кофем"> -->
+
+									<picture>
+										<source data-srcset="media/images/examples/example_14.webp" type="image/webp">
+										<source data-srcset="media/images/examples/example_14.png" type="image/png">
+										<img class="lazyload" data-src="media/images/examples/example_14.png" alt="3д сцена ленивец с кофем">
+									</picture>
 								</div>
 								<div class="example-footer">
 									<div class="example-footer-top">
-										<img src="media/images/examples/ava_14.png" alt="аватар студента Настя Недыхалова">
+										<!-- <img src="media/images/examples/ava_14.png" alt="аватар студента Настя Недыхалова"> -->
+
+										<picture>
+											<source data-srcset="media/images/examples/ava_14.webp" type="image/webp">
+											<source data-srcset="media/images/examples/ava_14.png" type="image/png">
+											<img class="lazyload" data-src="media/images/examples/ava_14.png" alt="аватар студента Настя Недыхалова">
+										</picture>
 										<div class="example-footer-info">
 											<div class="info-title">Настя Недыхалова</div>
 											<div class="info-post-title">Попала в ТОП-10 в коллаборации<br>с Blake
@@ -1938,11 +1988,24 @@
 						<div class="examples-wrapper examples-carousel-cell">
 							<div class="example-item">
 								<div class="example-image">
-									<img src="media/images/examples/example_15.png" alt="3д сцена комнаты с копьютером на столе">
+									<!-- <img src="media/images/examples/example_15.png" alt="3д сцена комнаты с копьютером на столе"> -->
+
+									<picture>
+										<source data-srcset="media/images/examples/example_15.webp" type="image/webp">
+										<source data-srcset="media/images/examples/example_15.png" type="image/png">
+										<img class="lazyload" data-src="media/images/examples/example_15.png" alt="3д сцена комнаты с копьютером на столе">
+									</picture>
 								</div>
 								<div class="example-footer">
 									<div class="example-footer-top">
-										<img src="media/images/examples/ava_15.png" alt="аватар студента Никита Егошкин">
+										<!-- <img src="media/images/examples/ava_15.png" alt="аватар студента Никита Егошкин"> -->
+
+										<picture>
+											<source data-srcset="media/images/examples/ava_15.webp" type="image/webp">
+											<source data-srcset="media/images/examples/ava_15.png" type="image/png">
+											<img class="lazyload" data-src="media/images/examples/ava_15.png" alt="аватар студента Никита Егошкин">
+										</picture>
+
 										<div class="example-footer-info">
 											<div class="info-title">Никита Егошкин</div>
 											<div class="info-post-title">До курса сменил более <br>пяти профессий</div>
@@ -1964,11 +2027,23 @@
 						<div class="examples-wrapper examples-carousel-cell">
 							<div class="example-item">
 								<div class="example-image">
-									<img src="media/images/examples/example_16.png" alt="3д сцена фильма оно С мульятшными головами">
+									<!-- <img src="media/images/examples/example_16.png" alt="3д сцена фильма оно С мульятшными головами"> -->
+
+									<picture>
+										<source data-srcset="media/images/examples/example_16.webp" type="image/webp">
+										<source data-srcset="media/images/examples/example_16.png" type="image/png">
+										<img class="lazyload" data-src="media/images/examples/example_16.png" alt="3д сцена фильма оно С мульятшными головами">
+									</picture>
 								</div>
 								<div class="example-footer">
 									<div class="example-footer-top">
-										<img src="media/images/examples/ava_16.png" alt="аватар студента Метвей Долгополов">
+										<!-- <img src="media/images/examples/ava_16.png" alt="аватар студента Метвей Долгополов"> -->
+
+										<picture>
+											<source data-srcset="media/images/examples/ava_16.webp" type="image/webp">
+											<source data-srcset="media/images/examples/ava_16.png" type="image/png">
+											<img class="lazyload" data-src="media/images/examples/ava_16.png" alt="аватар студента Метвей Долгополов">
+										</picture>
 										<div class="example-footer-info">
 											<div class="info-title">Матвей Долгополов</div>
 											<div class="info-post-title">Специализируется <br>на Rubber hose стиле</div>
@@ -2022,11 +2097,23 @@
 						<div class="examples-wrapper examples-carousel-cell">
 							<div class="example-item">
 								<div class="example-image">
-									<img src="media/images/examples/example_18.png" alt="3д сцена вампира">
+									<!-- <img src="media/images/examples/example_18.png" alt="3д сцена вампира"> -->
+
+									<picture>
+										<source data-srcset="media/images/examples/example_18.webp" type="image/webp">
+										<source data-srcset="media/images/examples/example_18.png" type="image/png">
+										<img class="lazyload" data-src="media/images/examples/example_18.png" alt="3д сцена вампира">
+									</picture>
 								</div>
 								<div class="example-footer">
 									<div class="example-footer-top">
-										<img src="media/images/examples/ava_18.png" alt="аватар студента Александр Анисимов">
+										<!-- <img src="media/images/examples/ava_18.png" alt="аватар студента Александр Анисимов"> -->
+
+										<picture>
+											<source data-srcset="media/images/examples/ava_18.webp" type="image/webp">
+											<source data-srcset="media/images/examples/ava_18.png" type="image/png">
+											<img class="lazyload" data-src="media/images/examples/ava_18.png" alt="аватар студента Александр Анисимов">
+										</picture>
 										<div class="example-footer-info">
 											<div class="info-title">Александр Анисимов</div>
 											<div class="info-post-title">Концепт-художник в компании <br>по разработке
@@ -2049,10 +2136,20 @@
 						<div class="examples-wrapper examples-carousel-cell">
 							<div class="example-item no-margin-right">
 								<div class="example-image">
-									<img src="media/images/examples/example_19.png" alt="3д сцена гидрант" </div>
+									<!-- <img src="media/images/examples/example_19.png" alt="3д сцена гидрант"> -->
+									<picture>
+										<source data-srcset="media/images/examples/example_19.webp" type="image/webp">
+										<source data-srcset="media/images/examples/example_19.png" type="image/png">
+										<img class="lazyload" data-src="media/images/examples/example_19.png" alt="3д сцена гидрант">
+									</picture>
 									<div class="example-footer">
 										<div class="example-footer-top">
-											<img src="media/images/examples/ava_19.png" alt="аватар студента Александр Бухтенко">
+											<!-- <img src="media/images/examples/ava_19.png" alt="аватар студента Александр Бухтенко"> -->
+											<picture>
+												<source data-srcset="media/images/examples/ava_19.webp" type="image/webp">
+												<source data-srcset="media/images/examples/ava_19.png" type="image/png">
+												<img class="lazyload" data-src="media/images/examples/ava_19.png" alt="аватар студента Александр Бухтенко">
+											</picture>
 											<div class="example-footer-info">
 												<div class="info-title">Александр Бухтенко</div>
 												<div class="info-post-title">Работает в СТС Медиа</div>
@@ -3733,6 +3830,7 @@
 		<div class="modal video_m" id="modal_video" data-headbord="yes" style="top: 4px; display: none;">
 			<div class="gad_modal_bone" id="yt_player"></div>
 		</div>
+
 
 		<script src="js/vendor/jquery-3.6.0.js"></script>
 		<script src="js/vendor/flickity.js"></script>
