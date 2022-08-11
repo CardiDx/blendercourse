@@ -217,29 +217,6 @@ https://flickity.metafizzy.co
 	cursor: pointer;
 }
 
-/*
-.flickity-button:hover {
-	background: white;
-	cursor: pointer;
-}
-
-.flickity-button:focus {
-	outline: none;
-	box-shadow: 0 0 0 5px #19F;
-}
-
-.flickity-button:active {
-	opacity: 0.6;
-}
-
-.flickity-button:disabled {
-	opacity: 0.3;
-	cursor: auto;
-	/* prevent disabled button from capturing pointer up event. #716 */
-/* pointer-events: none;
-}
-*/
-
 .flickity-button-icon {
 	fill: currentColor;
 }
@@ -501,11 +478,6 @@ input[type="radio"]:checked + label:after {
 	line-height: 20px;
 	text-transform: uppercase;
 	letter-spacing: 0.4px;
-
-	/* -webkit-transition: all .5s;
-	-moz-transition: all .5s;
-	-o-transition: all .5s;
-	transition: all .5s; */
 }
 
 .header-left-side {
@@ -543,7 +515,6 @@ input[type="radio"]:checked + label:after {
 	display: none;
 	width: 50px;
 	height: 50px;
-	/* background-color: #363636; */
 	border-radius: 8px;
 	position: relative;
 	cursor: pointer;
@@ -562,8 +533,6 @@ input[type="radio"]:checked + label:after {
 	right: 12px;
 	height: 3px;
 	background: #fff;
-
-	transition: background 0s 0.3s;
 }
 
 .hamburger span::before {
@@ -618,11 +587,6 @@ input[type="radio"]:checked + label:after {
 	padding-top: 25px;
 	padding-left: 23px;
 	padding-right: 25px;
-	/* opacity: 0; */
-
-	/* transition-property: opacity;
-    transition-duration: 0s;
-    transition-delay: 0s; */
 }
 
 .mobile-menu-item {
@@ -641,11 +605,6 @@ input[type="radio"]:checked + label:after {
 	align-content: start;
 	padding-left: 23px;
 	padding-right: 25px;
-	/* opacity: 0; */
-
-	/* transition-property: opacity;
-    transition-duration: 0s;
-    transition-delay: 0s; */
 }
 
 .mobile-menu-footer .button {
