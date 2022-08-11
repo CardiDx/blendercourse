@@ -1,3 +1,7 @@
+const lazyContent = new LazyLoad({
+  use_native: true // <-- there you go
+});
+
 $(".hamburger").click(function () {
   $(".header").toggleClass("active");
   $(".header").addClass("show");
