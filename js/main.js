@@ -1,7 +1,3 @@
-// const lazyContent = new LazyLoad({
-//   use_native: true, // <-- there you go
-// });
-
 (function () {
   function logElementEvent(eventName, element) {
     console.log(Date.now(), eventName, element.getAttribute("data-src"));
