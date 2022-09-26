@@ -26,6 +26,7 @@
   };
 
   var ll = new LazyLoad({
+    unobserve_entered: true, // <- Avoid executing the function multiple times
     class_applied: "lz-applied",
     class_loading: "lz-loading",
     class_loaded: "lz-loaded",
@@ -363,6 +364,7 @@ function calc_totals() {
 }
 
 // Изменение типа оплаты
+
 function paychange(type) {
   var El_BBC_1_price = document.getElementById("bl_BBC_Part_1_price");
   var El_BBC_2_price = document.getElementById("bl_BBC_Part_2_price");
@@ -379,6 +381,7 @@ function paychange(type) {
     "bl_installment_info_text"
   );
   var El_Hidden_Input_city = document.getElementById("ib_city");
+  var El_Payment_text = document.getElementById("bl_payment_text");
   var El_Agreement_text = document.getElementById("bl_agreement_text");
   var El_Button_text = document.getElementById("bl_button_text");
 
@@ -397,8 +400,10 @@ function paychange(type) {
     El_MC_1_price.innerHTML = MC_Full_price[1].toLocaleString() + `&nbsp₽`;
     El_MC_2_price.innerHTML = MC_Full_price[2].toLocaleString() + `&nbsp₽`;
 
+    El_Payment_text.innerHTML =
+      'Прежде чем перейти к&nbsp;оплате, подтвердите ознакомление с&nbsp;документами:';
     El_Agreement_text.innerHTML =
-      'Нажимая «Перейти к оплате», вы&nbspдаёте согласие на&nbspобработку персональных данных в&nbspсоответствии с&nbsp«<a href="//bestblendercourse.com/policy/">Политикой конфиденциальности</a>» и&nbspсоглашаетесь с&nbsp<a href="//bestblendercourse.com/oferta/">условиями договора</a>.';
+      'Нажимая на&nbspкнопку «Перейти&nbsp;к&nbsp;оплате», вы&nbsp;подтверждаете что&nbsp;вам есть 18&nbsp;лет';
     El_Button_text.innerHTML = "Перейти к оплате";
   } else if (type == "Installment") {
     El_Hidden_Installment_info.classList.remove("hidden");
@@ -415,11 +420,14 @@ function paychange(type) {
     El_MC_1_price.innerHTML = MC_Inst_price[1].toLocaleString() + `&nbsp₽`;
     El_MC_2_price.innerHTML = MC_Inst_price[2].toLocaleString() + `&nbsp₽`;
 
+    El_Payment_text.innerHTML =
+      'Прежде чем оформить заказ, подтвердите ознакомление с&nbsp;документами:';
     El_Agreement_text.innerHTML =
-      'Нажимая «Оформить заказ», вы&nbspдаёте согласие на&nbspобработку персональных данных в&nbspсоответствии с&nbsp«<a href="//bestblendercourse.com/policy/">Политикой конфиденциальности</a>» и&nbspсоглашаетесь с&nbsp<a href="//bestblendercourse.com/oferta/">условиями договора</a>.';
+      'Нажимая на&nbsp;кнопку «Оформить&nbsp;заказ», вы&nbsp;подтверждаете что&nbsp;вам есть 18&nbsp;лет';
     El_Button_text.innerHTML = "Оформить заказ";
   }
 }
+
 
 // Изменение типа оплаты при клике на объект
 function click_label(type) {
@@ -431,6 +439,11 @@ function click_label(type) {
     paychange("Installment");
   }
 }
+
+// Изменение чекбоксов в соглашениях
+$(document).on("click", ".pp_rs_pay_checkbox", function ()  {
+  $(this).toggleClass("active");
+});
 
 // обнуление всех чекбоксов
 function cb_refresh() {
@@ -472,7 +485,19 @@ function cb_refresh() {
 }
 
 // отправка данных пользователя в геткурс
+
 function submit() {
+  var acc_pers_data = $("#Acc_Pers_Data");
+  var acc_offerta = $("#Acc_Offerta");
+  
+  if (
+    ! (acc_pers_data.hasClass("active") 
+    && acc_offerta.hasClass("active"))
+  ) {
+    popup_open(".popup-warning");
+    return;
+    }
+
   var user = {
     name: "",
     phone: "",
@@ -557,7 +582,7 @@ function submit() {
   }
 
   link =
-    "http://service.bestblendercourse.com/paymentblock.php?payment_type=" +
+    "http://service.bestblendercourse.com/paymentblock2.php?payment_type=" +
     payment_type +
     "&BBC_products=" +
     BBC_products +
@@ -581,32 +606,85 @@ function submit() {
   location.href = link;
 }
 
-// установка стартовых размеров высоты блоков с описанием частей курса
-function media_content_resize() {
-  var src_items = $(".media-content.active");
 
-  for (var i = 0; i < src_items.length; i++) {
-    $(src_items[i]).parent().css("height", src_items[i].scrollHeight);
-  }
+// возвращает куки с указанным name,
+// или undefined, если ничего не найдено
+function getCookie(name) {
+  let matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
 }
 
-window.addEventListener("scroll", function (e) {
-  // установка стартовых размеров высоты блоков с описанием частей курса
-  media_content_resize();
-});
+// изменяет или добавляет новые куки
+// с указанным name и значением value
+// в options указываются доп. параметры 
+function setCookie(name, value, options = {}) {
 
-window.addEventListener("resize", function (e) {
-  // установка размеров высоты блоков с описанием частей курса
-  media_content_resize();
-});
+  options = {
+    path: '/',
+    // значения по умолчанию (можно добавить)
+    ...options
+  };
+
+  if (options.expires instanceof Date) {
+    options.expires = options.expires.toUTCString();
+  }
+
+  let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+  for (let optionKey in options) {
+    updatedCookie += "; " + optionKey;
+    let optionValue = options[optionKey];
+    if (optionValue !== true) {
+      updatedCookie += "=" + optionValue;
+    }
+  }
+
+  document.cookie = updatedCookie;
+}
+
+// удаляет куки с параметром name
+function deleteCookie(name) {
+  setCookie(name, "", {
+    'max-age': -1
+  })
+}
+
+// нажатие на подтверждение согласия на размещение куки
+function cookie_accept () {
+  setCookie ('cookie_acc', 'ok', {'max-age': 31536000})
+  $(".popup-cookie").addClass("popup-hidden");
+  $(".popup-cookie").removeClass("popup-visible");
+}
+
+// открытие попапов с селектором ind
+function popup_open(ind) {
+
+	$(ind).removeClass('popup-hidden');
+	$('body').addClass('scroll-lock');
+}
+
+// закрытие попапов с селектором ind
+function popup_close(ind) {
+
+	$(ind).addClass('popup-hidden');
+	$('body').removeClass('scroll-lock');
+}
 
 document.addEventListener("DOMContentLoaded", function (e) {
+  
+  // инициализация стартового набора блоков для покупки
   cb_refresh();
 
-  // установка стартовых размеров высоты блоков с описанием частей курса
-  media_content_resize();
-  setTimeout(media_content_resize, 500);
-  setTimeout(media_content_resize, 1000);
+  // отображение уведомления о cookie
+  var acc = getCookie('cookie_acc');
+  
+  if (acc !== 'ok') {
+    $(".popup-cookie").removeClass("popup-hidden");
+    $(".popup-cookie").addClass("popup-visible");
+  }
+
 });
 
 // блок с информацией о курсе
