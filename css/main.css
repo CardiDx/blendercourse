@@ -1777,7 +1777,8 @@ input[type="radio"]:checked + label:after {
 	display: flex;
 	flex-wrap: wrap;
 	align-content: flex-start;
-	max-width: 575px;
+	/* max-width: 575px; */
+	width: 60%;
 }
 
 .pp_ls_title_text {
@@ -1905,7 +1906,7 @@ input[type="radio"]:checked + label:after {
 .pp_ls_block_description {
 	display: flex;
 	flex-wrap: wrap;
-	/* flex-direction: column; */
+	flex-direction: column;
 	justify-content: center;
 	padding-left: 20px;
 	-webkit-transition: all var(---acc-trans-time);
@@ -1953,7 +1954,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .pp_ls_block_lessons_picture > img {
-	margin-top: 5px;
+	margin-top: 4px;
 }
 
 .pp_ls_block_lessons_text {
@@ -1965,16 +1966,16 @@ input[type="radio"]:checked + label:after {
 .pp_ls_block_lessons_text_li {
 	color: #808080;
 	font-family: "Muller", Sans-serif;
-	font-size: 13px;
+	font-size: 12px;
 }
 
 .pp_ls_block_duration_picture > img {
-	margin-top: 5px;
+	margin-top: 4px;
 }
 
 .pp_ls_block_duration_text {
 	align-self: center;
-	margin-left: 6px;
+	/* margin-left: 6px; */
 }
 
 .pp_ls_block_duration_text_li {
@@ -2044,7 +2045,7 @@ input[type="radio"]:checked + label:after {
 	font-size: 20px;
 	font-weight: normal;
 	letter-spacing: 0px;
-	line-height: 26px;
+	line-height: 24px;
 }
 
 .pp_ls_block_descr_bottom_line {
@@ -2356,6 +2357,10 @@ input[type="radio"]:checked + label:after {
 	transition: all var(--trans-time) ease;
 }
 
+.pp_rs_pay_choicer:first-child {
+	margin-right: 3px;
+}
+
 .pp_rs_pay_choicer:not(.active_choicer):hover {
 	background-color: #272727;
 }
@@ -2366,7 +2371,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .active_choicer {
-	border-radius: 12px;
+	border-radius: 14px;
 	background-color: #3e3e3e;
 }
 
@@ -3330,14 +3335,15 @@ input[type="radio"]:checked + label:after {
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 620px;
+		width: auto;
 	}
 
 	.pp_right_side {
-		margin-top: 80px;
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 620px;
 		min-width: unset;
+		margin-top: 80px;
 	}
 
 	.pp_rs_payment_section {
@@ -3463,6 +3469,10 @@ input[type="radio"]:checked + label:after {
 		margin-right: auto;
 		order: 1;
 		padding-bottom: 20px;
+	}
+
+	.pp_ls_block_description {
+		flex-direction: column;
 	}
 }
 
@@ -3869,10 +3879,11 @@ input[type="radio"]:checked + label:after {
 	}
 
 	.pp_title {
-		justify-content: left;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 490px;
+		width: 100%;
+		justify-content: flex-start;
+		/* margin-left: 0;
+		margin-right: 0; */
+		/* max-width: 490px;  */
 	}
 
 	.pp_title_text {
@@ -3887,11 +3898,13 @@ input[type="radio"]:checked + label:after {
 	}
 
 	.pp_left_side {
-		max-width: 490px;
+		max-width: 540px;
 		padding-bottom: 40px;
 	}
 
 	.pp_ls_block {
+		margin-left: -15px;
+		margin-right: -15px;
 		/* padding: 16px;
 		margin-top: 16px; */
 		/*background: #FFFFFF1A 0% 0% no-repeat padding-box;*/
@@ -3958,11 +3971,11 @@ input[type="radio"]:checked + label:after {
 	}
 
 	.pp_ls_block_lessons_picture {
-		display: none;
+		/* display: none; */
 	}
 
 	.pp_ls_block_lessons_text {
-		display: none;
+		/* display: none; */
 	}
 
 	.pp_ls_block_duration_picture {
@@ -3970,19 +3983,21 @@ input[type="radio"]:checked + label:after {
 	}
 
 	.pp_ls_block_duration_picture > img {
-		max-width: 10px;
-		margin-top: 8px;
+		width: 20px;
+		max-height: 20px;
+		/* margin-top: 8px; */
 	}
 
 	.pp_ls_block_duration_text_li {
-		font-size: 10px;
+		font-size: 12px;
 		margin-top: 2px;
 		line-height: 10px;
 	}
 
 	.pp_ls_block_descr_price_text_li {
-		font-size: 10px;
-		margin-top: 2px;
+		font-size: 12px;
+		/* margin-top: 2px; */
+		margin-right: 10px;
 		line-height: 10px;
 	}
 
@@ -4029,14 +4044,9 @@ input[type="radio"]:checked + label:after {
 	}
 
 	.pp_right_side {
-		max-width: none;
-		margin-top: 0px;
-		margin-left: -50px;
-		margin-right: -50px;
-		/*background: linear-gradient(#000, #0000);*/
 		background-color: #101010;
-		padding-left: 10px;
-		padding-right: 10px;
+		max-width: 540px;
+		margin-top: 32px;
 	}
 
 	.pp_rs_title_text {
@@ -4056,7 +4066,7 @@ input[type="radio"]:checked + label:after {
 
 	.pp_rs_payment_section {
 		width: 100%;
-		max-width: 490px;
+		max-width: 540px;
 		margin-left: -15px;
 		margin-right: -15px;
 		padding: 20px;
@@ -4072,8 +4082,8 @@ input[type="radio"]:checked + label:after {
 
 	.pp_ls_blocks_list {
 		width: auto;
-		margin-left: -15px;
-		margin-right: -15px;
+		/* margin-left: -15px;
+		margin-right: -15px; */
 	}
 
 	.pp_rs_pay_choicers {
@@ -4121,6 +4131,10 @@ input[type="radio"]:checked + label:after {
 
 	.faq_ls_bottom {
 		width: 100%;
+	}
+
+	.pp_rs_payment_section {
+		margin-top: 18px;
 	}
 }
 
@@ -4172,15 +4186,6 @@ input[type="radio"]:checked + label:after {
 		font-size: 17px;
 		line-height: 22px;
 		padding: 25px 30px;
-	}
-
-	/* Payment */
-
-	.pp_right_side {
-		margin-left: -15px;
-		margin-right: -15px;
-		padding-left: 15px;
-		padding-right: 15px;
 	}
 
 	.faq_ls_bottom {
@@ -4378,25 +4383,20 @@ input[type="radio"]:checked + label:after {
 	transition: opacity var(--trans-time);
 }
 
+input[type="text"].custome-input:valid + .custome-lable,
 input[type="text"].custome-input:focus ~ .custome-lable {
 	display: block;
 	color: #a9a9a9;
-	top: 15px;
-	font-size: 11px;
-}
-
-input[type="text"].custome-input:valid + .custome-lable {
-	display: block;
-	color: #a9a9a9;
-	top: 15px;
-	font-size: 11px;
+	transform: translateX(0) translateY(-11px) scale(0.87);
+	transform-origin: left top;
 }
 
 .custome-lable {
 	position: absolute;
 	left: 16px;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 17px;
+	/* top: 50%; */
+	/* transform: translateY(-50%); */
 	font-size: 15px;
 	line-height: 15px;
 	font-weight: 400;
@@ -4487,27 +4487,27 @@ input[type="checkbox"]:checked + label a {
 	color: #808080;
 }
 
-input[type="checkbox"]:checked + label::before {
+/* input[type="checkbox"]:checked + label::before {
 	background-color: #808080;
-	border: 1px solid #808080;
-}
 
-input[type="checkbox"]:checked + label:after {
+} */
+
+/* input[type="checkbox"]:checked + label:after {
 	position: absolute;
 	content: "";
 	top: 20px;
 	left: 20px;
 	width: 10px;
 	height: 6px;
-	border-radius: 0px;
-	border-left: 2px solid #1e1e1e;
-	border-bottom: 2px solid #1e1e1e;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-	box-sizing: border-box;
+} */
+
+input[type="checkbox"]:checked + label:before {
+	background-image: url("../media/images/css/check.svg");
+	/* background-size: 10px 6px; */
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 1px solid #808080;
+	background-color: #808080;
 }
 
 .pp_rs_pay_additional_info_text:first-child {
@@ -4521,4 +4521,14 @@ input[type="checkbox"]:checked + label:after {
 
 .pp_rs_pay_additional_info_text:last-child {
 	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 400px) {
+	.pp_ls_block_lessons_picture {
+		display: none;
+	}
+
+	.pp_ls_block_lessons_text {
+		display: none;
+	}
 }
