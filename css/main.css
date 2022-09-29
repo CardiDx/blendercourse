@@ -1171,7 +1171,8 @@ input[type="radio"]:checked + label:after {
 
 .media-contents {
 	margin-left: 8px;
-	height: 265px;
+	/* height: 265px; */
+	height: 304px;
 }
 
 .media-content {
@@ -1818,7 +1819,7 @@ input[type="radio"]:checked + label:after {
 .pp_ls_block {
 	display: flex;
 	width: 100%;
-	margin-top: 3px;
+	margin-top: 2px;
 	cursor: pointer;
 	padding: 20px;
 	background-color: #1d1d1d;
@@ -2458,7 +2459,7 @@ input[type="radio"]:checked + label:after {
 	border: 1px solid #535353;
 	border-radius: 12px;
 	opacity: 1;
-	height: 48px;
+	height: 52px;
 	color: #fff;
 	width: 100%;
 	padding: 20px 16px 4px 16px;
@@ -4394,7 +4395,7 @@ input[type="text"].custome-input:focus ~ .custome-lable {
 .custome-lable {
 	position: absolute;
 	left: 16px;
-	top: 17px;
+	top: 20px;
 	/* top: 50%; */
 	/* transform: translateY(-50%); */
 	font-size: 15px;
