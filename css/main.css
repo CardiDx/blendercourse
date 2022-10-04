@@ -4533,3 +4533,13 @@ input[type="checkbox"]:checked + label:before {
 		display: none;
 	}
 }
+
+.pp_rs_ui_submit_button.button--disabled {
+	background-color: #3e3e3e;
+	border-radius: 12px;
+	border-color: #3e3e3e;
+}
+
+.button--disabled .pp_rs_ui_submit_button_text_li {
+	color: #808080 !important;
+}

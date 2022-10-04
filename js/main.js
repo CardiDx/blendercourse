@@ -401,9 +401,9 @@ function paychange(type) {
     El_MC_2_price.innerHTML = MC_Full_price[2].toLocaleString() + `&nbsp₽`;
 
     El_Payment_text.innerHTML =
-      'Прежде чем перейти к&nbsp;оплате, подтвердите ознакомление с&nbsp;документами:';
+      "Прежде чем перейти к&nbsp;оплате, подтвердите ознакомление с&nbsp;документами:";
     El_Agreement_text.innerHTML =
-      'Нажимая на&nbspкнопку «Перейти&nbsp;к&nbsp;оплате», вы&nbsp;подтверждаете что&nbsp;вам есть 18&nbsp;лет';
+      "Нажимая на&nbspкнопку «Перейти&nbsp;к&nbsp;оплате», вы&nbsp;подтверждаете что&nbsp;вам есть 18&nbsp;лет";
     El_Button_text.innerHTML = "Перейти к оплате";
   } else if (type == "Installment") {
     El_Hidden_Installment_info.classList.remove("hidden");
@@ -421,13 +421,12 @@ function paychange(type) {
     El_MC_2_price.innerHTML = MC_Inst_price[2].toLocaleString() + `&nbsp₽`;
 
     El_Payment_text.innerHTML =
-      'Прежде чем оформить заказ, подтвердите ознакомление с&nbsp;документами:';
+      "Прежде чем оформить заказ, подтвердите ознакомление с&nbsp;документами:";
     El_Agreement_text.innerHTML =
-      'Нажимая на&nbsp;кнопку «Оформить&nbsp;заказ», вы&nbsp;подтверждаете что&nbsp;вам есть 18&nbsp;лет';
+      "Нажимая на&nbsp;кнопку «Оформить&nbsp;заказ», вы&nbsp;подтверждаете что&nbsp;вам есть 18&nbsp;лет";
     El_Button_text.innerHTML = "Оформить заказ";
   }
 }
-
 
 // Изменение типа оплаты при клике на объект
 function click_label(type) {
@@ -441,7 +440,7 @@ function click_label(type) {
 }
 
 // Изменение чекбоксов в соглашениях
-$(document).on("click", ".pp_rs_pay_checkbox", function ()  {
+$(document).on("click", ".pp_rs_pay_checkbox", function () {
   $(this).toggleClass("active");
 });
 
@@ -489,14 +488,11 @@ function cb_refresh() {
 function submit() {
   var acc_pers_data = $("#Acc_Pers_Data");
   var acc_offerta = $("#Acc_Offerta");
-  
-  if (
-    ! (acc_pers_data.hasClass("active") 
-    && acc_offerta.hasClass("active"))
-  ) {
+
+  if (!(acc_pers_data.hasClass("active") && acc_offerta.hasClass("active"))) {
     popup_open(".popup-warning");
     return;
-    }
+  }
 
   var user = {
     name: "",
@@ -606,32 +602,35 @@ function submit() {
   location.href = link;
 }
 
-
 // возвращает куки с указанным name,
 // или undefined, если ничего не найдено
 function getCookie(name) {
-  let matches = document.cookie.match(new RegExp(
-    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-  ));
+  let matches = document.cookie.match(
+    new RegExp(
+      "(?:^|; )" +
+        name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") +
+        "=([^;]*)"
+    )
+  );
   return matches ? decodeURIComponent(matches[1]) : undefined;
 }
 
 // изменяет или добавляет новые куки
 // с указанным name и значением value
-// в options указываются доп. параметры 
+// в options указываются доп. параметры
 function setCookie(name, value, options = {}) {
-
   options = {
-    path: '/',
+    path: "/",
     // значения по умолчанию (можно добавить)
-    ...options
+    ...options,
   };
 
   if (options.expires instanceof Date) {
     options.expires = options.expires.toUTCString();
   }
 
-  let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+  let updatedCookie =
+    encodeURIComponent(name) + "=" + encodeURIComponent(value);
 
   for (let optionKey in options) {
     updatedCookie += "; " + optionKey;
@@ -647,44 +646,40 @@ function setCookie(name, value, options = {}) {
 // удаляет куки с параметром name
 function deleteCookie(name) {
   setCookie(name, "", {
-    'max-age': -1
-  })
+    "max-age": -1,
+  });
 }
 
 // нажатие на подтверждение согласия на размещение куки
-function cookie_accept () {
-  setCookie ('cookie_acc', 'ok', {'max-age': 31536000})
+function cookie_accept() {
+  setCookie("cookie_acc", "ok", { "max-age": 31536000 });
   $(".popup-cookie").addClass("popup-hidden");
   $(".popup-cookie").removeClass("popup-visible");
 }
 
 // открытие попапов с селектором ind
 function popup_open(ind) {
-
-	$(ind).removeClass('popup-hidden');
-	$('body').addClass('scroll-lock');
+  $(ind).removeClass("popup-hidden");
+  $("body").addClass("scroll-lock");
 }
 
 // закрытие попапов с селектором ind
 function popup_close(ind) {
-
-	$(ind).addClass('popup-hidden');
-	$('body').removeClass('scroll-lock');
+  $(ind).addClass("popup-hidden");
+  $("body").removeClass("scroll-lock");
 }
 
 document.addEventListener("DOMContentLoaded", function (e) {
-  
   // инициализация стартового набора блоков для покупки
   cb_refresh();
 
   // отображение уведомления о cookie
-  var acc = getCookie('cookie_acc');
-  
-  if (acc !== 'ok') {
+  var acc = getCookie("cookie_acc");
+
+  if (acc !== "ok") {
     $(".popup-cookie").removeClass("popup-hidden");
     $(".popup-cookie").addClass("popup-visible");
   }
-
 });
 
 // блок с информацией о курсе
@@ -1201,4 +1196,18 @@ $(document).ready(function () {
       prevScrollpos = window.pageYOffset;
     }
   });
+});
+
+// Валидация формы оплаты - чекбоксы
+// $(".pp_rs_ui_submit_button").prop("disabled", true);
+
+$(".input_checkbox").click(function () {
+  if (
+    $("#check3").is(":checked") == true &&
+    $("#check4").is(":checked") == true
+  ) {
+    console.log("btn");
+    $(".pp_rs_ui_submit_button").removeClass("button--disabled");
+    // $(".pp_rs_ui_submit_button").prop("disabled", false);
+  }
 });
