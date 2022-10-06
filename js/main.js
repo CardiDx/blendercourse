@@ -345,10 +345,7 @@ function calc_totals() {
     }
   }
 
-  El_Inst_info.innerHTML =
-    `Итоговая сумма — ` +
-    Inst_total_price.toLocaleString() +
-    ` ₽ с&nbspучётом банковской комиссии`;
+  El_Inst_info.innerHTML = Inst_total_price.toLocaleString();
 
   str = Full_total_price.toLocaleString() + ` ₽`;
   El_Full_price.innerHTML = str.replace(/ /g, "&nbsp");
