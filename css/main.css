@@ -2362,9 +2362,9 @@ input[type="radio"]:checked + label:after {
 	margin-right: 3px;
 }
 
-.pp_rs_pay_choicer:not(.active_choicer):hover {
+/* .pp_rs_pay_choicer:not(.active_choicer):hover {
 	background-color: #272727;
-}
+} */
 
 .pp_rs_pay_choicer_right {
 	margin-right: 0px;
@@ -3971,13 +3971,13 @@ input[type="radio"]:checked + label:after {
 		line-height: 10px;
 	}
 
-	.pp_ls_block_lessons_picture {
-		/* display: none; */
-	}
+	/* .pp_ls_block_lessons_picture {
+		display: none;
+		}  */
 
-	.pp_ls_block_lessons_text {
-		/* display: none; */
-	}
+	/* .pp_ls_block_lessons_text {
+		display: none;
+	} */
 
 	.pp_ls_block_duration_picture {
 		line-height: 10px;
@@ -4542,4 +4542,10 @@ input[type="checkbox"]:checked + label:before {
 
 .button--disabled .pp_rs_ui_submit_button_text_li {
 	color: #808080 !important;
+}
+
+@media only screen and (max-width: 649px) {
+	.pp_rs_pay_installment_info_text_full_price {
+		margin-bottom: 0;
+	}
 }
