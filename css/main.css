@@ -4435,7 +4435,7 @@ input[type="text"].custome-input:focus ~ .custome-lable {
 	display: inline-block;
 	position: relative;
 	padding: 16px 16px 16px 42px !important;
-	background: #1e1e1e;
+	background-color: #1e1e1e;
 	border-radius: 17px;
 	font-weight: 400;
 	font-size: 12px;
@@ -4482,6 +4482,7 @@ input[type="text"].custome-input:focus ~ .custome-lable {
 
 input[type="checkbox"]:checked + label {
 	color: #808080;
+	background-color: #3e3e3e;
 }
 
 input[type="checkbox"]:checked + label a {
