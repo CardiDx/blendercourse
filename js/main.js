@@ -4,25 +4,25 @@
   }
 
   var callback_enter = function (element) {
-    logElementEvent("🔑 ENTERED", element);
+    // logElementEvent("🔑 ENTERED", element);
   };
   var callback_exit = function (element) {
-    logElementEvent("🚪 EXITED", element);
+    // logElementEvent("🚪 EXITED", element);
   };
   var callback_loading = function (element) {
-    logElementEvent("⌚ LOADING", element);
+    // logElementEvent("⌚ LOADING", element);
   };
   var callback_loaded = function (element) {
-    logElementEvent("👍 LOADED", element);
+    // logElementEvent("👍 LOADED", element);
   };
   var callback_error = function (element) {
-    logElementEvent("💀 ERROR", element);
+    // logElementEvent("💀 ERROR", element);
   };
   var callback_finish = function () {
-    logElementEvent("✔️ FINISHED", document.documentElement);
+    // logElementEvent("✔️ FINISHED", document.documentElement);
   };
   var callback_cancel = function (element) {
-    logElementEvent("🔥 CANCEL", element);
+    // logElementEvent("🔥 CANCEL", element);
   };
 
   var ll = new LazyLoad({
@@ -46,7 +46,7 @@
 
 $(".hamburger").click(function () {
   $(".header").toggleClass("active");
-  $(".header").addClass("show");
+  // $(".header").addClass("show");
 
   return false;
 });
@@ -55,7 +55,7 @@ $(".hamburger").click(function () {
 $(document).on("click", ".go_to", function () {
   var scroll_el = $(this).attr("data-go");
   var header_heigth = $(".header").outerHeight();
-  $(".header").removeClass("show");
+  // $(".header").removeClass("show");
 
   if ($(scroll_el).length != 0) {
     $("html, body").animate(
@@ -64,8 +64,8 @@ $(document).on("click", ".go_to", function () {
     );
   }
 
-  setTimeout(() => $(".header").addClass("show"), 550);
-  setTimeout(() => $(".header").addClass("show"), 650);
+  // setTimeout(() => $(".header").addClass("show"), 550);
+  // setTimeout(() => $(".header").addClass("show"), 650);
 
   return false;
 });
@@ -76,7 +76,7 @@ $(document).on("click", ".menu_go_to", function () {
   var header_heigth = 82;
 
   $(".header").toggleClass("active");
-  $(".header").removeClass("show");
+  // $(".header").removeClass("show");
 
   if ($(scroll_el).length != 0) {
     $("html, body").animate(
@@ -85,8 +85,8 @@ $(document).on("click", ".menu_go_to", function () {
     );
   }
 
-  setTimeout(() => $(".header").addClass("show"), 550);
-  setTimeout(() => $(".header").addClass("show"), 650);
+  // setTimeout(() => $(".header").addClass("show"), 550);
+  // setTimeout(() => $(".header").addClass("show"), 650);
 
   return false;
 });
@@ -155,13 +155,13 @@ $(document).ready(function () {
   let prevScrollpos = window.pageYOffset;
 
   // Запрещаем прятать хедер
-  var canHide = false;
+  // var canHide = false;
 
   // Показываем хедер
-  setTimeout(() => $(".header").addClass("show"), 250);
-  setTimeout(() => $(".header").addClass("show"), 500);
-  setTimeout(() => $(".header").addClass("show"), 750);
-  setTimeout(() => $(".header").addClass("show"), 1000);
+  // setTimeout(() => $(".header").addClass("show"), 250);
+  // setTimeout(() => $(".header").addClass("show"), 500);
+  // setTimeout(() => $(".header").addClass("show"), 750);
+  // setTimeout(() => $(".header").addClass("show"), 1000);
 
   $(window).scroll(function (event) {
     /* !!! появление/исчезновение при скролле !!! */
@@ -190,12 +190,11 @@ $(document).ready(function () {
     // Действие при прокрутке вниз
     if (lastScrollpos > prevScrollpos && canHide) {
       // Прячем хедер
-      $(".header").removeClass("show");
-
+      // $(".header").removeClass("show");
       // Действие при прокрутке вверх
     } else {
       // Показываем хедер
-      $(".header").addClass("show");
+      // $(".header").addClass("show");
     }
 
     // Запоминаем текущее положение странички после скролла
@@ -345,7 +344,7 @@ function calc_totals() {
     }
   }
 
-  El_Inst_info.innerHTML = Inst_total_price.toLocaleString();
+  El_Inst_info.innerHTML = Inst_total_price.toLocaleString() + ` ₽`;
 
   str = Full_total_price.toLocaleString() + ` ₽`;
   El_Full_price.innerHTML = str.replace(/ /g, "&nbsp");
@@ -738,7 +737,7 @@ $(".teachers-carousel").flickity({
   // Enable if items have percent widths
   // Disable if items have pixel widths, like images
 
-  prevNextButtons: false,
+  prevNextButtons: true,
   // creates and enables buttons to click to previous & next cells
 
   pageDots: true,
@@ -1188,7 +1187,8 @@ $(document).ready(function () {
     if (
       lastScrollpos > prevScrollpos + 30 ||
       lastScrollpos < prevScrollpos - 30
-    ) {
+    );
+    {
       $(".header").removeClass("active");
       prevScrollpos = window.pageYOffset;
     }
@@ -1203,7 +1203,6 @@ $(".input_checkbox").click(function () {
     $("#check3").is(":checked") == true &&
     $("#check4").is(":checked") == true
   ) {
-    console.log("btn");
     $(".pp_rs_ui_submit_button").removeClass("button--disabled");
     // $(".pp_rs_ui_submit_button").prop("disabled", false);
   }

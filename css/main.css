@@ -985,7 +985,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .teachers-content .flickity-prev-next-button {
-	top: -470px;
+	top: -413px;
 }
 
 /* .teachers-wrapper { */
@@ -3146,6 +3146,9 @@ input[type="radio"]:checked + label:after {
 	}
 
 	/* Header */
+	.header {
+		position: absolute;
+	}
 
 	.header.active {
 		top: 0px;
@@ -4507,7 +4510,7 @@ input[type="checkbox"]:checked + label:before {
 	background-image: url("../media/images/css/check.svg");
 	/* background-size: 10px 6px; */
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: center 3px;
 	border: 1px solid #808080;
 	background-color: #808080;
 }
