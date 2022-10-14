@@ -500,7 +500,7 @@ input[type="radio"]:checked + label:after {
 	background-color: #1f1f1f;
 	padding: 10px;
 	border: 1px solid #393939;
-	border-radius: 8px;
+	border-radius: 18px;
 
 	font-size: 12px;
 	font-weight: 600;
@@ -538,6 +538,10 @@ input[type="radio"]:checked + label:after {
 .header-item:hover {
 	color: #fff;
 	background-color: #363636;
+}
+
+.button.header-button {
+	border-radius: 12px;
 }
 
 .hamburger {
