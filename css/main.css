@@ -3169,19 +3169,21 @@ input[type="radio"]:checked + label:after {
 	}
 
 	.header-left-side {
-		display: unset;
+		/* display: unset; */
+		display: none;
 	}
 
-	.header-center {
+	/* .header-center {
 		display: none;
 	}
 
 	.header-button {
 		display: none;
-	}
+	} */
 
 	.hamburger {
-		display: flex;
+		/* display: flex; */
+		display: none;
 	}
 
 	.header.active .hamburger {
@@ -3484,6 +3486,35 @@ input[type="radio"]:checked + label:after {
 	}
 }
 
+@media only screen and (max-width: 970px) {
+	.header.bone {
+		width: 100%;
+		padding: 0;
+	}
+
+	.header-body {
+		border-radius: 0;
+		background-color: transparent;
+		border: none;
+	}
+
+	.header-left-side {
+		display: unset;
+	}
+
+	.header-center {
+		display: none;
+	}
+
+	.header-button {
+		display: none;
+	}
+
+	.hamburger {
+		display: flex;
+	}
+}
+
 @media only screen and (max-width: 950px) {
 	/* Chapters */
 
@@ -3639,14 +3670,8 @@ input[type="radio"]:checked + label:after {
 		height: calc(100vh - 62px);
 	}
 
-	.header.border {
-		border-bottom: 1px solid #393939;
-	}
-
 	.header-body {
 		border-radius: 0px 0px 0px 0px;
-		border: none;
-		border-bottom: 1px solid #393939;
 	}
 
 	.hamburger span {
