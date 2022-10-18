@@ -522,7 +522,7 @@ input[type="radio"]:checked + label:after {
 .header-item {
 	color: #7d7d7d;
 	padding: 17px 23px 13px 23px;
-	border-radius: 6px;
+	border-radius: 12px;
 	cursor: pointer;
 
 	-webkit-transition: all var(--trans-time);
@@ -533,11 +533,11 @@ input[type="radio"]:checked + label:after {
 
 .header-item.active {
 	color: #fff;
+	background-color: #363636;
 }
 
 .header-item:hover {
 	color: #fff;
-	background-color: #363636;
 }
 
 .button.header-button {
