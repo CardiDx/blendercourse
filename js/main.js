@@ -126,12 +126,20 @@ function set_active_item(index) {
   for (var i = 0; i < objects.length; i++) {
     if (i == index && !objects[i].classList.contains("faq_item_active")) {
       objects[i].classList.add("faq_item_active");
-      objects[i].style.paddingBottom = `30px`;
+      objects[i].style.paddingBottom = `56px`;
       objects_2[i].style.maxHeight = `${objects_2[i].scrollHeight}px`;
+
+      if (matchMedia("screen and (max-width: 1024px)").matches) {
+        objects[i].style.paddingBottom = `32px`;
+      }
     } else {
       objects[i].classList.remove("faq_item_active");
-      objects[i].style.paddingBottom = `20px`;
+      objects[i].style.paddingBottom = `40px`;
       objects_2[i].style.maxHeight = `0px`;
+
+      if (matchMedia("screen and (max-width: 1024px)").matches) {
+        objects[i].style.paddingBottom = `24px`;
+      }
     }
   }
 }
@@ -211,9 +219,12 @@ $(document).ready(function () {
     var payment = $(".pp_base").offset().top;
     var faq = $(".faq_base").offset().top;
 
+    // определяем высоту области просмотра
+    var viewport_heigth = document.documentElement.clientHeight;
     // определяем текущую позицию скролла без учёта высоты хедера
     var header_heigth = 82;
-    var currentScrollPos = window.pageYOffset + header_heigth + 1;
+    var currentScrollPos =
+      window.pageYOffset + header_heigth + 1 + viewport_heigth / 2;
 
     // определяем в каком разделе находимся и подсвечиваем нужный элемент
 
@@ -351,12 +362,6 @@ function calc_totals() {
 
   str = (Math.ceil(Inst_total_price / 12 / 10) * 10).toLocaleString() + ` ₽`;
   El_Inst_price.innerHTML = str.replace(/ /g, "&nbsp");
-
-  if (document.getElementById("rb1").checked) {
-    str = Full_total_price.toLocaleString() + ` ₽`;
-  } else if (document.getElementById("rb2").checked) {
-    str = Inst_total_price.toLocaleString() + ` ₽`;
-  }
 }
 
 // Изменение типа оплаты
@@ -379,7 +384,7 @@ function paychange(type) {
   var El_Hidden_Input_city = document.getElementById("ib_city");
   var El_Payment_text = document.getElementById("bl_payment_text");
   var El_Agreement_text = document.getElementById("bl_agreement_text");
-  var El_Button_text = document.getElementById("bl_button_text");
+  var El_Button_text = document.getElementById("Submit_btn");
 
   if (type == "Full") {
     El_Hidden_Installment_info.classList.add("hidden");
@@ -424,36 +429,28 @@ function paychange(type) {
   }
 }
 
-// Изменение типа оплаты при клике на объект
-function click_label(type) {
-  if (type == "Full") {
-    document.getElementById("rb1").checked = "checked";
-    paychange("Full");
-  } else if (type == "Installment") {
-    document.getElementById("rb2").checked = "checked";
-    paychange("Installment");
-  }
-}
-
 // Изменение чекбоксов в соглашениях
-$(document).on("click", ".pp_rs_pay_checkbox", function () {
+$(document).on("click", ".pp_rs_pay_additional_info_text", function () {
   $(this).toggleClass("active");
+
+  var acc_pers_data = $("#Acc_Pers_Data");
+  var acc_offerta = $("#Acc_Offerta");
+
+  if (acc_pers_data.hasClass("active") && acc_offerta.hasClass("active")) {
+    $("#Submit_btn").removeClass("disabled");
+  } else {
+    $("#Submit_btn").addClass("disabled");
+  }
 });
 
 // обнуление всех чекбоксов
 function cb_refresh() {
-  document.getElementById("rb1").checked = true;
-  document.getElementById("rb2").checked = false;
-
   var El_Checkboxes = document.querySelectorAll(".pp_ls_block");
 
   for (var i = 0; i < El_Checkboxes.length; i++) {
     El_Checkboxes[i].classList.remove("checked_block");
     El_Checkboxes[i].classList.add("unchecked_block");
   }
-
-  document.getElementById("rb1").checked = true;
-  document.getElementById("rb2").checked = false;
 
   document.getElementById("bl_BBC_Part_1").classList.add("checked_block");
   document.getElementById("bl_BBC_Part_1").classList.remove("unchecked_block");
@@ -482,11 +479,7 @@ function cb_refresh() {
 // отправка данных пользователя в геткурс
 
 function submit() {
-  var acc_pers_data = $("#Acc_Pers_Data");
-  var acc_offerta = $("#Acc_Offerta");
-
-  if (!(acc_pers_data.hasClass("active") && acc_offerta.hasClass("active"))) {
-    popup_open(".popup-warning");
+  if (document.getElementById("Submit_btn").classList.contains("disabled")) {
     return;
   }
 
@@ -574,7 +567,7 @@ function submit() {
   }
 
   link =
-    "http://service.bestblendercourse.com/paymentblock2.php?payment_type=" +
+    "http://service.bestblendercourse.com/paymentblock.php?payment_type=" +
     payment_type +
     "&BBC_products=" +
     BBC_products +
@@ -667,6 +660,7 @@ function popup_close(ind) {
 
 document.addEventListener("DOMContentLoaded", function (e) {
   // инициализация стартового набора блоков для покупки
+  paychange("Full");
   cb_refresh();
 
   // отображение уведомления о cookie
@@ -1198,6 +1192,7 @@ $(document).ready(function () {
 // Валидация формы оплаты - чекбоксы
 // $(".pp_rs_ui_submit_button").prop("disabled", true);
 
+/*
 $(".input_checkbox").click(function () {
   if (
     $("#check3").is(":checked") == true &&
@@ -1207,3 +1202,4 @@ $(".input_checkbox").click(function () {
     // $(".pp_rs_ui_submit_button").prop("disabled", false);
   }
 });
+*/
