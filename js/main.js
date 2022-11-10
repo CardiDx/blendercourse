@@ -718,7 +718,7 @@ $(".teachers-carousel").flickity({
   groupCells: false,
   // group cells together in slides
 
-  initialIndex: 0,
+  initialIndex: -1,
   // zero-based index of the initial selected cell
 
   lazyLoad: true,
@@ -734,7 +734,7 @@ $(".teachers-carousel").flickity({
   prevNextButtons: true,
   // creates and enables buttons to click to previous & next cells
 
-  pageDots: true,
+  pageDots: false,
   // create and enable page dots
 
   resize: true,
@@ -803,7 +803,7 @@ $(".information-carousel").flickity({
   groupCells: false,
   // group cells together in slides
 
-  initialIndex: 0,
+  initialIndex: -1,
   // zero-based index of the initial selected cell
 
   lazyLoad: true,
@@ -886,7 +886,7 @@ $(".chapters-mobile-carousel").flickity({
   groupCells: false,
   // group cells together in slides
 
-  initialIndex: 1,
+  initialIndex: -1,
   // zero-based index of the initial selected cell
 
   lazyLoad: true,
@@ -969,7 +969,7 @@ $(".examples-carousel").flickity({
   groupCells: false,
   // group cells together in slides
 
-  initialIndex: 1,
+  initialIndex: -1,
   // zero-based index of the initial selected cell
 
   lazyLoad: true,
@@ -1052,7 +1052,7 @@ $(".testimonials-carousel").flickity({
   groupCells: false,
   // group cells together in slides
 
-  initialIndex: 1,
+  initialIndex: -1,
   // zero-based index of the initial selected cell
 
   lazyLoad: true,
@@ -1135,7 +1135,7 @@ $(".student-work-carousel").flickity({
   groupCells: false,
   // group cells together in slides
 
-  initialIndex: 1,
+  initialIndex: -1,
   // zero-based index of the initial selected cell
 
   lazyLoad: true,
