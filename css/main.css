@@ -125,7 +125,7 @@ body {
 	justify-content: center;
 	text-decoration: none;
 	color: #000;
-	transition: var(--trans-time);
+	transition: all var(--trans-time) ease-in-out;
 }
 
 .button.lego-smile::before {
@@ -1561,7 +1561,6 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	max-height: 495px;
 	min-height: 495px;
 	border-radius: 25px;
-	margin-right: 16px;
 	margin-right: 14px;
 }
 
@@ -1949,7 +1948,7 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	position: relative;
 	margin-top: auto;
 	margin-bottom: auto;
-	border-radius: 20px;
+	border-radius: 18px;
 	background: #0077ff;
 	-webkit-transition: all var(---acc-trans-time);
 	-moz-transition: all var(---acc-trans-time);
@@ -2625,7 +2624,7 @@ input[type="text"].custom-input:focus ~ .custom-label {
 .pp_rs_pay_additional_info_title_li {
 	color: #808080;
 	font-family: "Muller", Sans-serif;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 15px;
 	padding-left: 16px;
 	padding-right: 16px;
@@ -2732,8 +2731,8 @@ input[type="text"].custom-input:focus ~ .custom-label {
 .pp_rs_pay_agreement_text_li {
 	color: #808080;
 	font-family: "Muller", Sans-serif;
-	font-size: 12px;
-	line-height: 15px;
+	font-size: 14px;
+	line-height: 20px;
 	text-align: center;
 	max-width: 300px;
 }
@@ -2827,7 +2826,7 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	/*background-color: #333;*/
 	/*border-radius: 25px;*/
 	min-width: 80px;
-	width: 422px;
+	width: 348px;
 	height: 80px;
 	overflow: hidden;
 	margin-top: auto;
@@ -3315,6 +3314,10 @@ input[type="text"].custom-input:focus ~ .custom-label {
 
 	/* Header */
 
+	.header {
+		position: absolute;
+	}
+
 	.header-body {
 		border-radius: 0px 0px 0px 0px;
 		border: none;
@@ -3555,6 +3558,12 @@ input[type="text"].custom-input:focus ~ .custom-label {
 		object-fit: cover;
 	}
 
+	.pp_rs_pay_choicer_right,
+	.pp_rs_pay_choicer,
+	.pp_rs_pay_choicer.active_choicer {
+		padding: 12px 24px 10px 24px;
+	}
+
 	.pp_rs_pay_choicers {
 		justify-content: center;
 	}
@@ -3570,6 +3579,33 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	.pp_rs_title_text,
 	.pp_ls_title_text {
 		justify-content: flex-start;
+		padding: 16px 24px;
+	}
+
+	.pp_ls_block_lessons_text_li,
+	.pp_ls_block_duration_text_li {
+		font-size: 14px;
+	}
+
+	.pp_rs_radio_descr_top_line_text_li {
+		font-size: 10px;
+	}
+
+	.pp_rs_radio_descr_bottom_line_text_li {
+		font-size: 20px;
+		margin-top: 4px;
+	}
+
+	.pp_rs_ui_input_block_field > input {
+		padding: 16px 24px 14px 24px;
+	}
+
+	.pp_rs_ui_input_block_field .custom-label {
+		left: 24px;
+	}
+
+	.pp_rs_pay_additional_info_text {
+		padding: 16px 24px;
 	}
 
 	/* FAQ */
@@ -4027,6 +4063,15 @@ input[type="text"].custom-input:focus ~ .custom-label {
 		border-top-right-radius: 25px;
 	}
 
+	.example-image > video {
+		max-width: unset;
+		min-width: unset;
+		max-height: 354px;
+		min-height: 354px;
+		object-fit: cover;
+		width: 100%;
+	}
+
 	/* Testimonials */
 
 	.testimonials {
@@ -4062,6 +4107,25 @@ input[type="text"].custom-input:focus ~ .custom-label {
 		margin-right: -15px;
 	}
 
+	.pp_ls_block_description {
+	}
+
+	.pp_ls_block {
+		padding: 15px 20px;
+	}
+
+	.pp_ls_block_description:after {
+		bottom: -16px;
+	}
+
+	.pp_rs_pay_additional_info_text_li {
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	.pp_rs_pay_user_info {
+		margin-top: 24px;
+	}
 	/* FAQ */
 
 	.faq_ls_top {
@@ -4121,6 +4185,23 @@ input[type="text"].custom-input:focus ~ .custom-label {
 		text-align: left;
 	}
 
+	.footer_right_side {
+		width: 100%;
+		justify-content: space-between;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.footer_rs_soc_buttons {
+		margin-right: 0;
+	}
+	.footer_rs_soc_btn {
+		margin-right: 8px;
+		margin-left: 0;
+	}
+	.footer_ls_str_1_text {
+		justify-content: flex-end;
+	}
 	/* Popup */
 
 	.popup-cookie {
@@ -4221,8 +4302,8 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	} */
 
 	.pp_ls_block {
-		margin-left: -15px;
-		margin-right: -15px;
+		/* margin-left: -15px;
+		margin-right: -15px; */
 		/* padding: 16px;
 		margin-top: 16px; */
 		/*background: #FFFFFF1A 0% 0% no-repeat padding-box;*/
@@ -4274,9 +4355,9 @@ input[type="text"].custom-input:focus ~ .custom-label {
 		transform: translate(-50%, -50%);
 	}
 
-	.pp_ls_block_description {
+	/* .pp_ls_block_description {
 		padding-left: 16px;
-	}
+	} */
 
 	.pp_ls_block_name_text {
 		padding-right: 12px;
@@ -4370,7 +4451,7 @@ input[type="text"].custom-input:focus ~ .custom-label {
 		max-width: 540px;
 		margin-left: -15px;
 		margin-right: -15px; */
-		padding: 20px;
+		padding: 24px 20px 32px 20px;
 	}
 
 	.pp_rs_radio_descr_bottom_line_text_li {
@@ -4378,7 +4459,9 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	}
 
 	.pp_rs_pay_agreement_text_li {
-		width: 255px;
+		/* width: 255px; */
+		padding-left: 16px;
+		padding-right: 40px;
 	}
 
 	.pp_ls_blocks_list {
@@ -4416,12 +4499,26 @@ input[type="text"].custom-input:focus ~ .custom-label {
 		padding: 0px;
 	}
 
+	.pp_ls_block {
+		padding-top: 18px;
+		padding-bottom: 18px;
+	}
+
+	.pp_ls_block_description:after {
+		bottom: -18px;
+	}
+
 	/*
 	.pp_rs_pay_agreement_text_li {
 		font-size: 10px;
 		line-height: 14px;
 	}
 	*/
+	.pp_rs_pay_choicer_right,
+	.pp_rs_pay_choicer,
+	.pp_rs_pay_choicer.active_choicer {
+		padding: 12px 12px 10px 12px;
+	}
 
 	/* FAQ */
 
@@ -4445,10 +4542,6 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	}
 
 	/* payment */
-
-	.pp_rs_payment_section {
-		margin-top: 18px;
-	}
 }
 
 @media (max-width: 600px) {
@@ -4492,6 +4585,7 @@ input[type="text"].custom-input:focus ~ .custom-label {
 		width: 100%;
 		height: 100%;
 		aspect-ratio: 2/1;
+		min-height: 162px;
 	}
 
 	.information-item {
@@ -4501,11 +4595,22 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	.information-body {
 		font-size: 17px;
 		line-height: 22px;
-		padding: 25px 30px;
+		padding: 32px 20px;
 	}
 
-	.faq_ls_bottom {
+	.examples-container {
+		margin-right: -30px;
+		margin-left: -30px;
+	}
+
+	/* .faq_ls_bottom {
 		padding-left: 15px;
+	} */
+
+	.examples-carousel .flickity-page-dots {
+		margin-left: 30px;
+		margin-right: 30px;
+		width: auto;
 	}
 }
 
@@ -4578,7 +4683,27 @@ input[type="text"].custom-input:focus ~ .custom-label {
 		font-size: 16px;
 	}
 
-	/* Popup */
+	/* Example */
+	.example-item {
+		margin-right: 0;
+		max-width: unset;
+		min-width: unset;
+		/* margin-right: 16px; */
+	}
+
+	.example-image > picture img {
+		max-width: unset;
+		min-width: unset;
+		min-height: unset;
+		max-height: 354px;
+		min-height: 354px;
+		object-fit: cover;
+		width: 100%;
+	}
+
+	.examples-wrapper.examples-carousel-cell {
+		/* margin: 0 -30px;	 */
+	}
 }
 
 @media only screen and (max-width: 480px) {
@@ -4650,11 +4775,11 @@ input[type="text"].custom-input:focus ~ .custom-label {
 }
 
 @media only screen and (max-width: 400px) {
-	.pp_ls_block_lessons_picture {
+	.pp_ls_block_duration_picture {
 		display: none;
 	}
 
-	.pp_ls_block_lessons_text {
+	.pp_ls_block_duration_text {
 		display: none;
 	}
 }
@@ -4712,4 +4837,28 @@ input[type="text"].custom-input:focus ~ .custom-label {
 /* helpers general class */
 .highlight-text {
 	color: #ffcc6b;
+}
+
+.button_fixed {
+	z-index: 11;
+	position: fixed;
+	right: 16px;
+	left: 16px;
+	bottom: 16px;
+	margin-bottom: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 1024px) {
+	.button_fixed {
+		right: 48px;
+		left: 48px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.button_fixed {
+		right: 16px;
+		left: 16px;
+	}
 }
