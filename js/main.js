@@ -212,7 +212,7 @@ $(document).ready(function () {
     /* !!! подсветка активного пункта !!! */
 
     // определяем позиции разделов
-    var about = $(".trailer-header").offset().top;
+    // var about = $(".trailer-header").offset().top;
     var training_programm = $(".chapters").offset().top; // to_do изменить на раздел с блоками
     var students = $(".examples-header").offset().top;
     var testimonials = $(".testimonials").offset().top;
@@ -228,24 +228,24 @@ $(document).ready(function () {
 
     // определяем в каком разделе находимся и подсвечиваем нужный элемент
 
-    if (currentScrollPos < about) {
-      $(".m-about").removeClass("active");
-      $(".m-training-programm").removeClass("active");
-      $(".m-students").removeClass("active");
-      $(".m-testimonials").removeClass("active");
-      $(".m-faq").removeClass("active");
-    }
+    // if (currentScrollPos < about) {
+    //   $(".m-about").removeClass("active");
+    //   $(".m-training-programm").removeClass("active");
+    //   $(".m-students").removeClass("active");
+    //   $(".m-testimonials").removeClass("active");
+    //   $(".m-faq").removeClass("active");
+    // }
 
-    if (about < currentScrollPos && currentScrollPos < training_programm) {
-      $(".m-about").addClass("active");
-      $(".m-training-programm").removeClass("active");
-      $(".m-students").removeClass("active");
-      $(".m-testimonials").removeClass("active");
-      $(".m-faq").removeClass("active");
-    }
+    // if (about < currentScrollPos && currentScrollPos < training_programm) {
+    //   // $(".m-about").addClass("active");
+    //   $(".m-training-programm").removeClass("active");
+    //   $(".m-students").removeClass("active");
+    //   $(".m-testimonials").removeClass("active");
+    //   $(".m-faq").removeClass("active");
+    // }
 
     if (training_programm < currentScrollPos && currentScrollPos < students) {
-      $(".m-about").removeClass("active");
+      // $(".m-about").removeClass("active");
       $(".m-training-programm").addClass("active");
       $(".m-students").removeClass("active");
       $(".m-testimonials").removeClass("active");
@@ -253,7 +253,7 @@ $(document).ready(function () {
     }
 
     if (students < currentScrollPos && currentScrollPos < testimonials) {
-      $(".m-about").removeClass("active");
+      // $(".m-about").removeClass("active");
       $(".m-training-programm").removeClass("active");
       $(".m-students").addClass("active");
       $(".m-testimonials").removeClass("active");
@@ -261,7 +261,7 @@ $(document).ready(function () {
     }
 
     if (testimonials < currentScrollPos && currentScrollPos < payment) {
-      $(".m-about").removeClass("active");
+      // $(".m-about").removeClass("active");
       $(".m-training-programm").removeClass("active");
       $(".m-students").removeClass("active");
       $(".m-testimonials").addClass("active");
@@ -269,7 +269,7 @@ $(document).ready(function () {
     }
 
     if (payment < currentScrollPos && currentScrollPos < faq) {
-      $(".m-about").removeClass("active");
+      // $(".m-about").removeClass("active");
       $(".m-training-programm").removeClass("active");
       $(".m-students").removeClass("active");
       $(".m-testimonials").removeClass("active");
@@ -277,7 +277,7 @@ $(document).ready(function () {
     }
 
     if (faq < currentScrollPos) {
-      $(".m-about").removeClass("active");
+      // $(".m-about").removeClass("active");
       $(".m-training-programm").removeClass("active");
       $(".m-students").removeClass("active");
       $(".m-testimonials").removeClass("active");
@@ -1287,13 +1287,13 @@ $(".input_checkbox").click(function () {
 */
 
 // Фиксированная кнопка на мобилке
-
 const mediaQuery = window.matchMedia("(max-width: 768px)");
+
 if (mediaQuery.matches) {
-  $(window).scroll(function () {
-    var sticky = $("#button-fixed"),
-      scroll = $(window).scrollTop();
-    if (scroll >= 150) sticky.addClass("button_fixed");
-    else sticky.removeClass("button_fixed");
+  $(window).scroll(function (event) {
+    Scrollposition = window.pageYOffset;
+    var sticky = $("#button-fixed");
+    if (Scrollposition >= 150) sticky.addClass("button_fixed--visible");
+    else sticky.removeClass("button_fixed--visible");
   });
 }
