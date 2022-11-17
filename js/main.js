@@ -404,8 +404,8 @@ function paychange(type) {
     El_Payment_text.innerHTML =
       "Прежде чем перейти к&nbsp;оплате, подтвердите ознакомление с&nbsp;документами:";
     El_Agreement_text.innerHTML =
-      "Нажимая на&nbspкнопку «Перейти&nbsp;к&nbsp;оплате», вы&nbsp;подтверждаете что&nbsp;вам есть 18&nbsp;лет";
-    El_Button_text.innerHTML = "Перейти к оплате";
+      "Нажимая на&nbspкнопку «Оформить заказ», вы&nbsp;подтверждаете что&nbsp;вам есть 18&nbsp;лет";
+    El_Button_text.innerHTML = "Оформить заказ";
   } else if (type == "Installment") {
     El_Hidden_Installment_info.classList.remove("hidden");
     El_Hidden_Input_city.classList.remove("hidden");
@@ -424,7 +424,7 @@ function paychange(type) {
     El_Payment_text.innerHTML =
       "Прежде чем оформить заказ, подтвердите ознакомление с&nbsp;документами:";
     El_Agreement_text.innerHTML =
-      "Нажимая на&nbsp;кнопку «Оформить&nbsp;заказ», вы&nbsp;подтверждаете что&nbsp;вам есть 18&nbsp;лет";
+      "Нажимая на&nbspкнопку «Оформить заказ», вы&nbsp;подтверждаете что&nbsp;вам есть 18&nbsp;лет";
     El_Button_text.innerHTML = "Оформить заказ";
   }
 }
