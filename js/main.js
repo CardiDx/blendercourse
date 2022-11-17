@@ -212,7 +212,7 @@ $(document).ready(function () {
     /* !!! подсветка активного пункта !!! */
 
     // определяем позиции разделов
-    // var about = $(".trailer-header").offset().top;
+    var about = $(".information").offset().top;
     var training_programm = $(".chapters").offset().top; // to_do изменить на раздел с блоками
     var students = $(".examples-header").offset().top;
     var testimonials = $(".testimonials").offset().top;
@@ -228,24 +228,24 @@ $(document).ready(function () {
 
     // определяем в каком разделе находимся и подсвечиваем нужный элемент
 
-    // if (currentScrollPos < about) {
-    //   $(".m-about").removeClass("active");
-    //   $(".m-training-programm").removeClass("active");
-    //   $(".m-students").removeClass("active");
-    //   $(".m-testimonials").removeClass("active");
-    //   $(".m-faq").removeClass("active");
-    // }
+    if (currentScrollPos < about) {
+      $(".m-about").removeClass("active");
+      $(".m-training-programm").removeClass("active");
+      $(".m-students").removeClass("active");
+      $(".m-testimonials").removeClass("active");
+      $(".m-faq").removeClass("active");
+    }
 
-    // if (about < currentScrollPos && currentScrollPos < training_programm) {
-    //   // $(".m-about").addClass("active");
-    //   $(".m-training-programm").removeClass("active");
-    //   $(".m-students").removeClass("active");
-    //   $(".m-testimonials").removeClass("active");
-    //   $(".m-faq").removeClass("active");
-    // }
+    if (about < currentScrollPos && currentScrollPos < training_programm) {
+      $(".m-about").addClass("active");
+      $(".m-training-programm").removeClass("active");
+      $(".m-students").removeClass("active");
+      $(".m-testimonials").removeClass("active");
+      $(".m-faq").removeClass("active");
+    }
 
     if (training_programm < currentScrollPos && currentScrollPos < students) {
-      // $(".m-about").removeClass("active");
+      $(".m-about").removeClass("active");
       $(".m-training-programm").addClass("active");
       $(".m-students").removeClass("active");
       $(".m-testimonials").removeClass("active");
@@ -253,7 +253,7 @@ $(document).ready(function () {
     }
 
     if (students < currentScrollPos && currentScrollPos < testimonials) {
-      // $(".m-about").removeClass("active");
+      $(".m-about").removeClass("active");
       $(".m-training-programm").removeClass("active");
       $(".m-students").addClass("active");
       $(".m-testimonials").removeClass("active");
@@ -261,7 +261,7 @@ $(document).ready(function () {
     }
 
     if (testimonials < currentScrollPos && currentScrollPos < payment) {
-      // $(".m-about").removeClass("active");
+      $(".m-about").removeClass("active");
       $(".m-training-programm").removeClass("active");
       $(".m-students").removeClass("active");
       $(".m-testimonials").addClass("active");
@@ -269,7 +269,7 @@ $(document).ready(function () {
     }
 
     if (payment < currentScrollPos && currentScrollPos < faq) {
-      // $(".m-about").removeClass("active");
+      $(".m-about").removeClass("active");
       $(".m-training-programm").removeClass("active");
       $(".m-students").removeClass("active");
       $(".m-testimonials").removeClass("active");
@@ -277,7 +277,7 @@ $(document).ready(function () {
     }
 
     if (faq < currentScrollPos) {
-      // $(".m-about").removeClass("active");
+      $(".m-about").removeClass("active");
       $(".m-training-programm").removeClass("active");
       $(".m-students").removeClass("active");
       $(".m-testimonials").removeClass("active");
@@ -923,89 +923,6 @@ $(".chapters-mobile-carousel").flickity({
   // at end of cells, wraps-around to first for infinite scrolling
 });
 
-// блок примеров работ
-// $(".examples-carousel").flickity({
-//   // options, defaults listed
-
-//   accessibility: true,
-//   // enable keyboard navigation, pressing left & right keys
-
-//   adaptiveHeight: false,
-//   // set carousel height to the selected slide
-
-//   autoPlay: false,
-//   // advances to the next cell
-//   // if true, default is 3 seconds
-//   // or set time between advances in milliseconds
-//   // i.e. `autoPlay: 1000` will advance every 1 second
-
-//   cellAlign: "left",
-//   // alignment of cells, 'center', 'left', or 'right'
-//   // or a decimal 0-1, 0 is beginning (left) of container, 1 is end (right)
-
-//   cellSelector: undefined,
-//   // specify selector for cell elements
-
-//   contain: true,
-//   // will contain cells to container
-//   // so no excess scroll at beginning or end
-//   // has no effect if wrapAround is enabled
-
-//   draggable: ">1",
-//   // enables dragging & flicking
-//   // if at least 2 cells
-
-//   dragThreshold: 10,
-//   // number of pixels a user must scroll horizontally to start dragging
-//   // increase to allow more room for vertical scroll for touch devices
-
-//   freeScroll: false,
-//   // enables content to be freely scrolled and flicked
-//   // without aligning cells
-
-//   friction: 0.5,
-//   // smaller number = easier to flick farther
-
-//   groupCells: false,
-//   // group cells together in slides
-
-//   initialIndex: -1,
-//   // zero-based index of the initial selected cell
-
-//   lazyLoad: true,
-//   // enable lazy-loading images
-//   // set img data-flickity-lazyload="src.jpg"
-//   // set to number to load images adjacent cells
-
-//   percentPosition: true,
-//   // sets positioning in percent values, rather than pixels
-//   // Enable if items have percent widths
-//   // Disable if items have pixel widths, like images
-
-//   prevNextButtons: true,
-//   // creates and enables buttons to click to previous & next cells
-
-//   pageDots: true,
-//   // create and enable page dots
-
-//   resize: true,
-//   // listens to window resize events to adjust size & positions
-
-//   rightToLeft: false,
-//   // enables right-to-left layout
-
-//   setGallerySize: true,
-//   // sets the height of gallery
-//   // disable if gallery already has height set with CSS
-
-//   watchCSS: false,
-//   // watches the content of :after of the element
-//   // activates if #element:after { content: 'flickity' }
-
-//   wrapAround: false,
-//   // at end of cells, wraps-around to first for infinite scrolling
-// });
-
 $(".examples-carousel").flickity({
   // options, defaults listed
 
@@ -1287,13 +1204,13 @@ $(".input_checkbox").click(function () {
 */
 
 // Фиксированная кнопка на мобилке
-const mediaQuery = window.matchMedia("(max-width: 768px)");
+const mediaQuery = window.matchMedia("(max-width: 1023px)");
 
 if (mediaQuery.matches) {
   $(window).scroll(function (event) {
     Scrollposition = window.pageYOffset;
     var sticky = $("#button-fixed");
-    if (Scrollposition >= 150) sticky.addClass("button_fixed--visible");
+    if (Scrollposition >= 200) sticky.addClass("button_fixed--visible");
     else sticky.removeClass("button_fixed--visible");
   });
 }
