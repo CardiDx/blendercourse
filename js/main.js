@@ -1204,32 +1204,23 @@ $(".input_checkbox").click(function () {
 */
 
 // Фиксированная кнопка на мобилке
-const mediaQuery = window.matchMedia("(max-width: 1023px)");
-
-if (mediaQuery.matches) {
-  $(window).scroll(function (event) {
-    Scrollposition = window.pageYOffset;
-    var sticky = $("#button-fixed");
-    if (Scrollposition >= 660) sticky.addClass("button_fixed--visible");
-    else sticky.removeClass("button_fixed--visible");
-  });
-}
-
-// Скрываем кнопку при скролле к оплате
-
-if (mediaQuery.matches) {
+if (matchMedia("screen and (max-width: 1023px)").matches) {
   $(window).scroll(function () {
     var offset = $("#student-offset").offset();
+    var welcomeArea = $(".information").offset();
 
-    if ($(this).scrollTop() > offset.top) {
-      console.log("work");
-      $(".button_fixed--visible").css({
+    if (
+      $(this).scrollTop() > offset.top ||
+      $(this).scrollTop() <= welcomeArea.top
+    ) {
+      // console.log("hidden");
+      $(".button_fixed").css({
         visibility: "hidden",
         opacity: "0",
       });
     } else {
-      console.log("nmo");
-      $(".button_fixed--visible").css({
+      // console.log("visible");
+      $(".button_fixed").css({
         visibility: "visible",
         opacity: "1",
       });
