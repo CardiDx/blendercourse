@@ -289,7 +289,7 @@ $(document).ready(function () {
 /* Константы для блока оплаты */
 
 const BBC_parts_count = 5;
-const MC_parts_count = 2;
+const MC_parts_count = 1;
 
 let BBC_Full_price = [];
 let BBC_Inst_price = [];
@@ -310,10 +310,10 @@ let MC_Full_price = [];
 let MC_Inst_price = [];
 
 MC_Full_price[1] = 9900;
-MC_Full_price[2] = 9900;
+// MC_Full_price[2] = 9900;
 
 MC_Inst_price[1] = 11900;
-MC_Inst_price[2] = 11900;
+// MC_Inst_price[2] = 11900;
 
 // Изменение статуса выделения блока оплаты
 function blockchange(course, part) {
@@ -374,7 +374,7 @@ function paychange(type) {
   var El_BBC_5_price = document.getElementById("bl_BBC_Part_5_price");
 
   var El_MC_1_price = document.getElementById("bl_MC_Part_1_price");
-  var El_MC_2_price = document.getElementById("bl_MC_Part_2_price");
+  // var El_MC_2_price = document.getElementById("bl_MC_Part_2_price");
 
   var El_Choicer_Full = document.getElementById("ch_Full");
   var El_Choicer_Inst = document.getElementById("ch_Inst");
@@ -399,7 +399,7 @@ function paychange(type) {
     El_BBC_5_price.innerHTML = BBC_Full_price[5].toLocaleString() + `&nbsp₽`;
 
     El_MC_1_price.innerHTML = MC_Full_price[1].toLocaleString() + `&nbsp₽`;
-    El_MC_2_price.innerHTML = MC_Full_price[2].toLocaleString() + `&nbsp₽`;
+    // El_MC_2_price.innerHTML = MC_Full_price[2].toLocaleString() + `&nbsp₽`;
 
     El_Payment_text.innerHTML =
       "Прежде чем перейти к&nbsp;оплате, подтвердите ознакомление с&nbsp;документами:";
@@ -419,7 +419,7 @@ function paychange(type) {
     El_BBC_5_price.innerHTML = BBC_Inst_price[5].toLocaleString() + `&nbsp₽`;
 
     El_MC_1_price.innerHTML = MC_Inst_price[1].toLocaleString() + `&nbsp₽`;
-    El_MC_2_price.innerHTML = MC_Inst_price[2].toLocaleString() + `&nbsp₽`;
+    // El_MC_2_price.innerHTML = MC_Inst_price[2].toLocaleString() + `&nbsp₽`;
 
     El_Payment_text.innerHTML =
       "Прежде чем оформить заказ, подтвердите ознакомление с&nbsp;документами:";
@@ -470,8 +470,8 @@ function cb_refresh() {
   document.getElementById("bl_MC_Part_1").classList.remove("checked_block");
   document.getElementById("bl_MC_Part_1").classList.add("unchecked_block");
 
-  document.getElementById("bl_MC_Part_2").classList.remove("checked_block");
-  document.getElementById("bl_MC_Part_2").classList.add("unchecked_block");
+  // document.getElementById("bl_MC_Part_2").classList.remove("checked_block");
+  // document.getElementById("bl_MC_Part_2").classList.add("unchecked_block");
 
   calc_totals();
 }
@@ -672,7 +672,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
   }
 });
 
-// блок с информацией о курсе
+// блок с преподавателями
 $(".teachers-carousel").flickity({
   // options, defaults listed
 
@@ -718,7 +718,7 @@ $(".teachers-carousel").flickity({
   groupCells: false,
   // group cells together in slides
 
-  initialIndex: -1,
+  initialIndex: 0,
   // zero-based index of the initial selected cell
 
   lazyLoad: true,
@@ -803,7 +803,7 @@ $(".information-carousel").flickity({
   groupCells: false,
   // group cells together in slides
 
-  initialIndex: -1,
+  initialIndex: 0,
   // zero-based index of the initial selected cell
 
   lazyLoad: true,
@@ -886,7 +886,7 @@ $(".chapters-mobile-carousel").flickity({
   groupCells: false,
   // group cells together in slides
 
-  initialIndex: -1,
+  initialIndex: 1,
   // zero-based index of the initial selected cell
 
   lazyLoad: true,
@@ -968,7 +968,7 @@ $(".examples-carousel").flickity({
   groupCells: false,
   // group cells together in slides
 
-  initialIndex: -1,
+  initialIndex: 1,
   // zero-based index of the initial selected cell
 
   lazyLoad: true,
@@ -1051,7 +1051,7 @@ $(".testimonials-carousel").flickity({
   groupCells: false,
   // group cells together in slides
 
-  initialIndex: -1,
+  initialIndex: 1,
   // zero-based index of the initial selected cell
 
   lazyLoad: true,
@@ -1134,7 +1134,7 @@ $(".student-work-carousel").flickity({
   groupCells: false,
   // group cells together in slides
 
-  initialIndex: -1,
+  initialIndex: 1,
   // zero-based index of the initial selected cell
 
   lazyLoad: true,
