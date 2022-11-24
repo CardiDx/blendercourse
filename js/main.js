@@ -129,7 +129,11 @@ function set_active_item(index) {
       objects[i].style.paddingBottom = `56px`;
       objects_2[i].style.maxHeight = `${objects_2[i].scrollHeight}px`;
 
-      if (matchMedia("screen and (max-width: 1024px)").matches) {
+      if (matchMedia("screen and (max-width: 1023px)").matches) {
+        objects[i].style.paddingBottom = `48px`;
+      }
+
+      if (matchMedia("screen and (max-width: 767px)").matches) {
         objects[i].style.paddingBottom = `32px`;
       }
     } else {
@@ -137,7 +141,7 @@ function set_active_item(index) {
       objects[i].style.paddingBottom = `40px`;
       objects_2[i].style.maxHeight = `0px`;
 
-      if (matchMedia("screen and (max-width: 1024px)").matches) {
+      if (matchMedia("screen and (max-width: 767px)").matches) {
         objects[i].style.paddingBottom = `24px`;
       }
     }
