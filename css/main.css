@@ -1,3 +1,11 @@
+/* Only ios */
+
+* {
+	-webkit-locale: auto;
+}
+
+/* Main */
+
 body {
 	--trans-time: 0.3s;
 	---acc-trans-time: 0.4s;
@@ -550,7 +558,7 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	/* padding: 5px 5px 5px 5px!important; */
 	z-index: 10;
 
-		/* -webkit-transition: all 0.5s;
+	/* -webkit-transition: all 0.5s;
 		-moz-transition: all 0.5s;
 		-o-transition: all 0.5s;
 		transition: all 0.5s;
@@ -996,8 +1004,8 @@ input[type="text"].custom-input:focus ~ .custom-label {
 
 .promo-buttons .button.big {
 	flex-shrink: 0;
-	padding-right: 40px;
-	padding-left: 35px;
+	padding-right: 38px;
+	padding-left: 38px;
 	max-width: 200px;
 	line-height: 20px;
 	padding-top: 14px;
@@ -1914,9 +1922,9 @@ input[type="text"].custom-input:focus ~ .custom-label {
 }
 
 .pp_text_li {
-	font-size: 29px;
+	font-size: 30px;
+	line-height: 34px;
 	font-weight: 400;
-	line-height: 33px;
 }
 
 .pp_body {
@@ -2849,16 +2857,15 @@ input[type="text"].custom-input:focus ~ .custom-label {
 }
 
 .faq_ls_top_title_text {
-	display: flex;
-	width: 100%;
+	text-align: center;
 }
 
 .faq_ls_top_title_text_li {
 	color: #fff;
 	font-family: "Muller", Sans-serif;
-	font-size: 40px;
-	font-weight: normal;
-	line-height: 40px;
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 34px;
 	letter-spacing: 0px;
 	max-width: 400px;
 }
@@ -4269,7 +4276,6 @@ input[type="text"].custom-input:focus ~ .custom-label {
 
 	.faq_ls_top_title_text {
 		justify-content: flex-start;
-		text-align: left;
 	}
 
 	.faq_item {
@@ -4675,6 +4681,10 @@ input[type="text"].custom-input:focus ~ .custom-label {
 
 	.faq_ls_top {
 		width: 100%;
+	}
+
+	.faq_ls_top_title_text {
+		text-align: left;
 	}
 
 	.faq_ls_top_additional-info {
