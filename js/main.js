@@ -313,7 +313,7 @@ BBC_Inst_price[5] = 17900;
 let MC_Full_price = [];
 let MC_Inst_price = [];
 
-MC_Full_price[1] = 9900;
+MC_Full_price[1] = 19800;
 // MC_Full_price[2] = 9900;
 
 MC_Inst_price[1] = 11900;

@@ -1815,7 +1815,7 @@ input[type="text"].custom-input:focus ~ .custom-label {
 
 .testimonial-info .info-item {
 	font-size: 10px;
-	background-color: #272727;
+	background-color: #232323;
 	border-radius: 25px;
 	box-sizing: border-box;
 	width: fit-content;
@@ -1896,8 +1896,11 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	max-width: 45% !important;
 }
 
-.logo-workshop {
-	width: 45%;
+img.logo-workshop {
+	max-width: 118px;
+	width: 118px;
+	height: 85px;
+	max-height: 85px;
 }
 
 /* Payment */
@@ -2765,8 +2768,8 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	color: #fff;
 	font-family: "Muller", Sans-serif;
 	font-size: 14px;
-	line-height: 18px;
-	margin-top: 2px;
+	line-height: 20px;
+	/* margin-top: 2px; */
 	max-width: 330px;
 	-webkit-transition: all var(---acc-trans-time);
 	-moz-transition: all var(---acc-trans-time);
@@ -4258,9 +4261,8 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	}
 
 	.pp_rs_pay_additional_info_text_li {
-		font-size: 14px;
-		line-height: 18px;
 		max-width: 100%;
+		margin-top: 2px;
 	}
 
 	.pp_rs_pay_user_info {
