@@ -575,7 +575,7 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	justify-content: space-between;
 	align-items: center;
 
-	background-color: #1f1f1f;
+	background-color: #1d1d1d;
 	padding: 6px;
 	border: 1px solid #393939;
 	border-radius: 18px;
@@ -1228,7 +1228,7 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	background-color: #181818;
+	background-color: #1d1d1d;
 	box-sizing: border-box;
 	padding: 2px;
 	width: 500px;
@@ -1631,7 +1631,7 @@ input[type="text"].custom-input:focus ~ .custom-label {
 }
 
 .example-item {
-	background-color: #181818;
+	background-color: #1d1d1d;
 	box-sizing: border-box;
 	padding: 2px;
 	max-width: 329px;
@@ -1761,7 +1761,6 @@ input[type="text"].custom-input:focus ~ .custom-label {
 }
 
 .testimonial-item {
-	background-color: #191919;
 	background-color: #1d1d1d;
 	box-sizing: border-box;
 	padding: 24px;
@@ -1876,7 +1875,7 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	display: flex;
 	width: 186px;
 	height: 186px;
-	background: #1b1b1b;
+	background: #1d1d1d;
 	border-radius: 25px;
 	margin-right: 16px;
 }
@@ -3435,7 +3434,7 @@ input[type="text"].custom-input:focus ~ .custom-label {
 	.header.active {
 		top: 0;
 		bottom: 0;
-		background-color: #181818;
+		background-color: #1d1d1d;
 		transition: background-color 0.3s ease-in-out;
 		position: fixed;
 		z-index: 12;
